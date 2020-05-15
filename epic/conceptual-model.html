@@ -10,30 +10,37 @@
 <body>
     <h2>Conceptual Model</h2>
     <h3>Entities &amp; Attributes:</h3>
-    <p><strong>PROFILE:</strong></p>
+    <p><strong>GALLERY (strong)</strong></p>
     <ul>
-        <li>profileId (primary key)</li>
-        <li>profileActivationToken</li>
-        <li>profileEmail</li>
-        <li>profileHash</li>
-        <li>profileHandle</li>
+        <li>galleryId (primary key)</li>
+        <li>galleryName</li>
+        <li>galleryDate</li>
     </ul>
-    <p><strong>CONTENT:</strong></p>
+    <p><strong>GLOSSARY (strong):</strong></p>
     <ul>
-        <li>contentId (primary key)</li>
-        <li>contentName</li>
+        <li>glossaryId (primary key)</li>
+        <li>glossaryName</li>
         <li>contentImg</li>
         <li>contentFactoid</li>
     </ul>
-    <p><strong>LIKE:</strong></p>
+    <p><strong>VIDEO (weak):</strong></p>
     <ul>
-        <li>likeProfileId (foreign key)</li>
-        <li>likeContentId (foreign key)</li>
+        <li>videoId (primary key)</li>
+        <li>videoImgId (foreign key)</li>
+        <li>videoDateId</li>
+    </ul>
+    <p><strong>NEWS (weak):</strong></p>
+    <ul>
+        <li>newsId (primary key)</li>
+        <li>newsImgId (foreign key)</li>
+        <li>newsDate</li>
+        <li>newsEvent</li>
     </ul>
     <p><strong>Relations:</strong></p>
     <ul>
-        <li>One profile can like many cards (content) - (1 to n)</li>
-        <li>Many cards (content) can be liked by many profiles (m to n)</li>
-    <img src="diagram.png" alt="Entity Relationship Diagram" />
+        <li>Many gallery items can have many news items</li>
+        <li>Many gallery items can have many glossary entries</li>
+        <li>One video can have many glossary entries</li>
+    <img src="../images/diagram.png" alt="Entity Relationship Diagram" />
 </body>
 </html>

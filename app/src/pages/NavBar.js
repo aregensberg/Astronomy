@@ -1,15 +1,21 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
 
 
 export function NavBar() {
   return(
     <>
-      <Navbar expand="lg" variant="light" bg="light">
-        <Container>
-          <Navbar.Brand href="#">Astronomy</Navbar.Brand>
-        </Container>
+      <container>
+      <Navbar bg="light" variant="light">
+        <Navbar.Brand href="#home">Astronomy</Navbar.Brand>
+        <Nav className="mr-auto">
+          <Nav.Link href="#media">Media</Nav.Link>
+          <Nav.Link href="#glossary">Glossary</Nav.Link>
+          <Nav.Link href="#news">News</Nav.Link>
+        </Nav>
       </Navbar>
+      </container>
     </>
   )}

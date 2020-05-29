@@ -2,8 +2,8 @@ import React from 'react'
 import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed'
 
 
-
-export const landing = () => {
+export function landing() {
+  return (
   <>
     <div style={{ width: 660, height: 'auto' }}>
       <ResponsiveEmbed aspectRatio="16by9">
@@ -11,4 +11,5 @@ export const landing = () => {
       </ResponsiveEmbed>
     </div>
   </>
+  )
 }

@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card'
 import CardColumns from 'react-bootstrap/CardColumns'
 
 
-export function landing() {
+export function Landing() {
   return (
   <>
     <Image src="place holder" fluid />

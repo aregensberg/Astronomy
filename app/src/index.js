@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import {FourOhFour} from "./pages/FourOhFour";
 import {Home} from "./pages/Home";
 import {Glossary} from './pages/Glossary'
-import {landing} from './pages/Landing'
+import {Landing} from './pages/Landing'
 import {NavBar} from './pages/NavBar'
 import {Media} from './pages/Media'
 

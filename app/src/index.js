@@ -12,7 +12,7 @@ ReactDOM.render(
   <React.StrictMode>
     <div className="container">
       <NavBar />
-      <landing />
+      <Landing />
       <Glossary />
       <Media />
     </div>

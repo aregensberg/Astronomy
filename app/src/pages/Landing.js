@@ -24,6 +24,8 @@ export function Landing() {
         </Card.Body>
       </Card>
     </CardColumns>
+    </div>
   </>
-  )
+    )
     }
+

@@ -13,6 +13,7 @@ ReactDOM.render(
   <React.StrictMode>
     <div className="container">
       <NavBar />
+      <News />
       <Landing />
       <Glossary />
       <Media />

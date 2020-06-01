@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button'
 export function Landing() {
   return (
   <>
-    <Image src=".../" fluid />
+    <Image src="" fluid />
 
     <div className="mb-2">
       <Button variant="primary" size="lg">NEWS</Button>{' '}

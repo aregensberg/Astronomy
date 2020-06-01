@@ -3,14 +3,16 @@ import Image from 'react-bootstrap/Image'
 import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed'
 import Card from 'react-bootstrap/Card'
 import CardColumns from 'react-bootstrap/CardColumns'
+import Button from 'react-bootstrap/Button'
 
 
 export function Landing() {
   return (
   <>
-    <Image src="place holder" fluid />
+    <Image src=".../" fluid />
 
-
+    <div className="mb-2">
+      <Button variant="primary" size="lg">NEWS</Button>{' '}
     <CardColumns>
       <Card>
         <Card.Body>
@@ -24,4 +26,4 @@ export function Landing() {
     </CardColumns>
   </>
   )
-}
+    }

@@ -26,7 +26,7 @@ export function Glossary() {
             <div className="col">
               <p>Scamper meow to be let out, kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
                 attack your ankles chase the red dot, hairball run catnip eat the grass sniff cat mojo so purrrrrr but
-                steal mom's crouton while she is in the bathroom chase the pig around the house. </p>
+                steal mom's crouton while she is in the bathroom chase the pig around the house. test </p>
             </div>
           </div>
           <div className="row mx-md-5 mx-3 py-5 align-items-center">

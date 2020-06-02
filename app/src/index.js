@@ -8,6 +8,23 @@ import {FourOhFour} from "./pages/FourOhFour";
 import {Glossary} from './pages/Glossary'
 import {Landing} from './pages/Landing'
 import {NavBar} from './pages/NavBar'
+import {Media} from './pages/Media'
+import {News} from './pages/News'
+
+
+
+
+const Routing = () => (
+  <BrowserRouter>
+   <Switch>
+      <Route exact path="/" component={Landing}/>
+      <Route exact path="/Glossary" component={Glossary}/>
+      <Route exact path="/Media" component={Media}/>
+      <Route exact path="/News" component={News}/>
+      <Route component={FourOhFour}/>
+   </Switch>
+  </BrowserRouter>
+)
 
 
 

@@ -6,6 +6,7 @@ import {Home} from "./pages/Home";
 import {Glossary} from './pages/Glossary'
 import {landing} from './pages/Landing'
 import {NavBar} from './pages/NavBar'
+import {Media} from './pages/Media'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ ReactDOM.render(
       <NavBar />
       <landing />
       <Glossary />
+      <Media />
     </div>
   </React.StrictMode>,
   document.getElementById('root')

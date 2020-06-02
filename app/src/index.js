@@ -7,6 +7,8 @@ import {Home} from "./pages/Home";
 import {Glossary} from './pages/Glossary'
 import {Landing} from './pages/Landing'
 import {NavBar} from './pages/NavBar'
+import {Media} from './pages/Media'
+import {News} from './pages/News'
 
 
 const Routing = (

@@ -7,7 +7,6 @@ import {Home} from "./pages/Home";
 import {Glossary} from './pages/Glossary'
 import {Landing} from './pages/Landing'
 import {NavBar} from './pages/NavBar'
-import {Media} from './pages/Media'
 
 
 const Routing = (
@@ -30,7 +29,6 @@ ReactDOM.render(
       <News />
       <Landing />
       <Glossary />
-      <Media />
     </div>
   </React.StrictMode>,
   Routing,

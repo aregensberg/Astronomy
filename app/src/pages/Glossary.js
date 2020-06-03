@@ -5,8 +5,6 @@ import Nav from 'react-bootstrap/Nav'
 export function Glossary() {
     return(
       <>
-<<<<<<< HEAD
-=======
         <div id="glossary">
         <Navbar bg="light" variant="light">
           <Navbar.Brand href="#home">Astronomy</Navbar.Brand>
@@ -16,7 +14,6 @@ export function Glossary() {
             <Nav.Link href="#news">News</Nav.Link>
           </Nav>
         </Navbar>
->>>>>>> feature-glossary
         <div className="container text-center">
             <div className="row">
               <div className="col">
@@ -50,7 +47,6 @@ export function Glossary() {
             <div className="col">
               <p>Scamper meow to be let out, kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
                 attack your ankles chase the red dot, hairball run catnip eat the grass sniff cat mojo so purrrrrr but
-<<<<<<< HEAD
                 steal mom's crouton while she is in the bathroom chase the pig around the house. </p>
             </div>
           </div>
@@ -61,8 +57,6 @@ export function Glossary() {
             <div className="col">
               <p>Scamper meow to be let out, kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
                 attack your ankles chase the red dot, hairball run catnip eat the grass sniff cat mojo so purrrrrr but
-=======
->>>>>>> feature-glossary
                 steal mom's crouton while she is in the bathroom chase the pig around the house. </p>
             </div>
           </div>

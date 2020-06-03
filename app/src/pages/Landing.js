@@ -51,6 +51,18 @@ export function Landing() {
       </div>
     </CardColumns>
     </div>
+
+    <div>
+      <footer>
+        <div className="bg-light p-2">
+          <Nav className="mr-auto justify-content-center">
+            <Nav.Link href="#media">Media</Nav.Link>
+            <Nav.Link href="#glossary">Glossary</Nav.Link>
+            <Nav.Link href="#news">News</Nav.Link>
+          </Nav>
+        </div>
+      </footer>
+    </div>
   </>
     )
     }

@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav'
 export function News() {
   return(
     <>
+      <div id="news">
       <Navbar bg="light" variant="light">
         <Navbar.Brand href="#home">Astronomy</Navbar.Brand>
         <Nav className="mr-auto">
@@ -70,6 +71,7 @@ export function News() {
             </Nav>
           </div>
         </footer>
+      </div>
       </div>
     </>
   )

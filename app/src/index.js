@@ -10,7 +10,7 @@ import {Landing} from './pages/Landing'
 import {NavBar} from './pages/NavBar'
 import {Media} from './pages/Media'
 import {News} from './pages/News'
-
+import {Footer} from './pages/footer'
 
 
 

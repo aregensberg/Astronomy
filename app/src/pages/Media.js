@@ -1,13 +1,29 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
+import Container from 'react-bootstrap'
 import CarouselCaption from 'react-bootstrap/CarouselCaption'
 import { text } from '@fortawesome/fontawesome-svg-core'
 
 export function Media() {
   return(
     <>
-      <div className={'media'}></div>
+      <div className='media'></div>
+{/*NavBar*/}
+      <container>
+        <Navbar bg="light" variant="light">
+          <Navbar.Brand href="#home">Astronomy</Navbar.Brand>
+          <Nav className="mr-auto">
+            <Nav.Link href="#media">Media</Nav.Link>
+            <Nav.Link href="#glossary">Glossary</Nav.Link>
+            <Nav.Link href="#news">News</Nav.Link>
+          </Nav>
+        </Navbar>
+      </container>
+
 {/*Header*/}
+
             <div className="card-body">
               <h1 className="text-center">Media</h1>
             </div>
@@ -19,6 +35,8 @@ export function Media() {
             <h2 className="text-center">Photo's</h2>
         </div>
       </div>
+
+
 {/*Planet Photo Section*/}
       <div className="card-columns">
         <div className="card bg-light">
@@ -108,16 +126,13 @@ export function Media() {
 {/*Video carousel*/}
 
       <Carousel>
+
         <Carousel.Item>
           <img
             className="d-block w-100"
             src="https://thesigndude.com/wp-content/uploads/2017/09/video-placeholder.jpg"
             alt="Third slide"
           />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </Carousel.Caption>
         </Carousel.Item>
 
         <Carousel.Item>
@@ -126,10 +141,6 @@ export function Media() {
             src="https://thesigndude.com/wp-content/uploads/2017/09/video-placeholder.jpg"
             alt="Third slide"
           />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </Carousel.Caption>
         </Carousel.Item>
 
         <Carousel.Item>
@@ -138,12 +149,24 @@ export function Media() {
             src="https://thesigndude.com/wp-content/uploads/2017/09/video-placeholder.jpg"
             alt="Third slide"
           />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </Carousel.Caption>
         </Carousel.Item>
+
       </Carousel>
+
+
+{/*Footer*/}
+      <div>
+        <footer>
+          <div className="bg-light p-2">
+            <Nav className="mr-auto justify-content-center">
+              <Nav.Link href="#media">Media</Nav.Link>
+              <Nav.Link href="#glossary">Glossary</Nav.Link>
+              <Nav.Link href="#news">News</Nav.Link>
+            </Nav>
+          </div>
+        </footer>
+      </div>
+
     </>
   )
 }

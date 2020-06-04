@@ -28,6 +28,7 @@ export function Landing() {
     </div>
 
 
+
     <div className="m-5 p-2">
       <div className="p-2 mx-5">
       <Button variant="primary" size="lg">NEWS</Button>{' '}

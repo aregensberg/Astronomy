@@ -10,37 +10,28 @@
 <body>
     <h2>Conceptual Model</h2>
     <h3>Entities &amp; Attributes:</h3>
-    <p><strong>GALLERY (strong)</strong></p>
+    <p><strong>MEDIA (strong)</strong></p>
     <ul>
-        <li>galleryId (primary key)</li>
-        <li>galleryName</li>
-        <li>galleryDate</li>
+        <li>imgId (primary key)</li>
+        <li>imgName</li>
+        <li>mediaIsVideo (BOOLEAN)</li>
+        <li>videoDescriptionId</li>
+        <li>videoDateId</li>
     </ul>
     <p><strong>GLOSSARY (strong):</strong></p>
     <ul>
         <li>glossaryId (primary key)</li>
         <li>glossaryName</li>
-        <li>contentImg</li>
-        <li>contentFactoid</li>
+        <li>glossaryDefinition</li>
     </ul>
-    <p><strong>VIDEO (weak):</strong></p>
-    <ul>
-        <li>videoId (primary key)</li>
-        <li>videoImgId (foreign key)</li>
-        <li>videoDateId</li>
-    </ul>
-    <p><strong>NEWS (weak):</strong></p>
+    <p><strong>NEWS (strong):</strong></p>
     <ul>
         <li>newsId (primary key)</li>
-        <li>newsImgId (foreign key)</li>
-        <li>newsDate</li>
-        <li>newsEvent</li>
+        <li>newsImg</li>
+        <li>newsDescription</li>
+        <li>newsUrl</li>
+        <li>newsTitle</li>
     </ul>
-    <p><strong>Relations:</strong></p>
-    <ul>
-        <li>Many gallery items can have many news items</li>
-        <li>Many gallery items can have many glossary entries</li>
-        <li>One video can have many glossary entries</li>
-    <img src="diagram.png" alt="Entity Relationship Diagram" />
+    <img src="../images/diagram.png" alt="Entity Relationship Diagram" />
 </body>
 </html>

@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS news;
 
 CREATE TABLE media(
     imgId binary(16) not null,
-    mediaIsVideo binary(BOOLEAN) not null,
+    mediaIsVideo boolean default false,
     videoDescriptionId binary(32) not null,
     videoDateId datetime(3) not null,
     primary key (imgId)

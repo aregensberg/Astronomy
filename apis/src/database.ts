@@ -16,8 +16,6 @@ export async function connect (): Promise<Pool> {
 
 		user: process.env.MYSQL_USER,
 
-		password: process.env.MYSQL_PASSWORD,
-
 		database: process.env.MYSQL_DATABASE,
 
 		connectionLimit: 10,

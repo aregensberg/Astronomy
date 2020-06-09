@@ -3,26 +3,26 @@ DROP TABLE IF EXISTS glossary;
 DROP TABLE IF EXISTS news;
 
 CREATE TABLE media(
-    imgId binary(16) not null,
-    mediaIsVideo boolean default false,
-    videoDescriptionId binary(32) not null,
-    videoDateId datetime(3) not null,
+    imgId varchar(255) not null,
+    mediaIsVideo tinyint not null,
+    mediaDescription varchar(512) not null,
+    mediaDate datetime(3) not null,
     primary key (imgId)
 );
 
 CREATE TABLE glossary(
-    glossaryId binary(16) not null,
-    glossaryName binary(16) not null,
-    glossaryDefinition binary(32) not null,
+    glossaryId varchar(255) not null,
+    glossaryName varchar(255) not null,
+    glossaryDefinition varchar(255) not null,
     primary key (glossaryId)
 );
 
 CREATE TABLE news(
-    newsId binary(16) not null,
-    newsImg binary(16) not null,
-    newsDescription binary(16) not null,
-    newsUrl varchar(32) not null,
-    newsTitle binary(16) not null,
+    newsId varchar(255) not null,
+    newsImg varchar(255) not null,
+    newsDescription varchar(255) not null,
+    newsUrl varchar(255) not null,
+    newsTitle varchar(255) not null,
     unique(newsTitle),
     primary key(newsId)
 );

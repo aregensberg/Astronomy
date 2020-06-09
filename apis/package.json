@@ -10,15 +10,15 @@
 
   "scripts": {
 
-    "compile": "ts-node ./src/index.ts",
+    "compile": "src/node_modules/.bin/ts-node ./src/index.ts",
 
-    "dev": "./node_modules/nodemon/bin/nodemon.js -e ts  --exec \"npm run compile\"",
+    "dev": "src/node_modules/nodemon/bin/nodemon.js -e ts  --exec \\\"npm run compile\\\"",
 
     "test": "echo \\\"Error: no src/test specified\\\" && exit 1",
 
-    "clean": " standardx --fix --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint-plugin **/*.ts",
+    "clean": " src/node_modules/.bin/standardx --fix --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint-plugin **/*.ts",
 
-    "lint": " standardx --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint-plugin **/*.ts"
+    "lint": " src/node_modules/.bin/standardx --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint-plugin **/*.ts"
 
   },
 

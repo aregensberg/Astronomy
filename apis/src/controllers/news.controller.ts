@@ -1,5 +1,4 @@
 import {NextFunction, Request, Response} from "express";
-import {Status} from "../../utils/interfaces/status";
 import {getAllNews} from "../../utils/news/getAllNews";
 import {getNewsByDescription} from "../../utils/news/getNewsByDescription";
 import {getNewsByDescriptionAndTitle} from "../../utils/news/getNewsByDescriptionAndTitle";
@@ -53,7 +52,7 @@ export async function getNewsByDescriptionAndTitleController(request: Request, r
 
 	try {
 
-		// const data = await getNewsByDescriptionAndTitle(request.body.description.title)
+		const data = await getNewsByDescriptionAndTitle(request.body.description.title)
 
 		console.log(data)
 

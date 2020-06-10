@@ -49,7 +49,7 @@ export async function getNewsByDescriptionController(request: Request, response:
 
 }
 
-export async function getNewsByDescriptionAndTitle(request: Request, response: Response, nextFunction: NextFunction) {
+export async function getNewsByDescriptionAndTitleController(request: Request, response: Response, nextFunction: NextFunction) {
 
 	try {
 
@@ -69,7 +69,7 @@ export async function getNewsByDescriptionAndTitle(request: Request, response: R
 
 }
 
-export async function getNewsByNewsDate(request: Request, response: Response, nextFunction: NextFunction) {
+export async function getNewsByNewsDateController(request: Request, response: Response, nextFunction: NextFunction) {
 
 	try {
 
@@ -89,7 +89,7 @@ export async function getNewsByNewsDate(request: Request, response: Response, ne
 
 }
 
-export async function getNewsByNewsId(request: Request, response: Response, nextFunction: NextFunction) {
+export async function getNewsByNewsIdController(request: Request, response: Response, nextFunction: NextFunction) {
 
 	try {
 
@@ -109,7 +109,7 @@ export async function getNewsByNewsId(request: Request, response: Response, next
 
 }
 
-export async function getNewsByNewsImg(request: Request, response: Response, nextFunction: NextFunction) {
+export async function getNewsByNewsImgController(request: Request, response: Response, nextFunction: NextFunction) {
 
 	try {
 
@@ -129,7 +129,7 @@ export async function getNewsByNewsImg(request: Request, response: Response, nex
 
 }
 
-export async function getNewsByTitle(request: Request, response: Response, nextFunction: NextFunction) {
+export async function getNewsByTitleController(request: Request, response: Response, nextFunction: NextFunction) {
 
 	try {
 

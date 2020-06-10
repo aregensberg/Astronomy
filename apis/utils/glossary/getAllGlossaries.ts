@@ -1,5 +1,4 @@
 import {connect} from "../../src/database";
-
 import {Glossary} from "../interfaces/Glossary";
 
 
@@ -13,7 +12,6 @@ import {Glossary} from "../interfaces/Glossary";
 export async function getAllGlossaries() {
 
 	try {
-
 
 
 		const mysqlConnection = await connect()

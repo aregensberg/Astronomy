@@ -23,6 +23,7 @@ CREATE TABLE news(
     newsDescription varchar(255) not null,
     newsUrl varchar(255) not null,
     newsTitle varchar(255) not null,
+    newsDate datetime(3) not null,
     unique(newsTitle),
     primary key(newsId)
 );

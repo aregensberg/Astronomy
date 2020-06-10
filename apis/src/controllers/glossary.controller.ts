@@ -1,6 +1,8 @@
 import {NextFunction, Request, Response} from "express";
 import {status} from "../../utils/interfaces/status";
-import {getAllGlossaries} from "../../utils/Glossary/getAllGlossaries"
+import {getAllGlossaries} from "../../utils/Glossary/getAllGlossaries";
+import {getGlossaryByGlossaryId} from "../../utils/glossary/getGlossaryByGlossaryId";
+import {getGlossaryByName} from "../../utils/glossary/getGlossaryByName";
 
 
 export async function getAllGlossariesController(request: Request, response: Response, nextFunction: NextFunction) {
@@ -28,7 +30,7 @@ export async function getGlossaryByNameController(request: Request, response: Re
 
 	try {
 
-		const data = await getGlossaryByNameController(request.body.name)
+		const data = await getGlossaryByName(request.body.name)
 
 		console.log(data)
 
@@ -48,7 +50,7 @@ export async function getAllGlossaryByIdController(request: Request, response: R
 
 	try {
 
-		const data = await getAllGlossaryById(request.body.id)
+		const data = await getGlossaryByGlossaryId(request.body.id)
 
 		console.log(data)
 

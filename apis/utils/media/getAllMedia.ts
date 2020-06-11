@@ -17,7 +17,7 @@ export async function getAllMedia() {
 
         const mysqlConnection = await connect()
 
-        const mySqlQuery = "SELECT BIN_TO_UUID(imgId) AS imgId, mediaIsVideo, mediaDescription, mediaDate FROM Media";
+        const mySqlQuery = "SELECT * FROM Media";
 
         const [rows] = await mysqlConnection.execute(mySqlQuery)
 

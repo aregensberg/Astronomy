@@ -9,9 +9,7 @@ import morgan from 'morgan';
 // Routes
 
 import {indexRoutes} from './routes/index.route';
-
-
-
+import {mediaRoute} from "./routes/media.route";
 
 
 // The following class creates the app and instantiates the server
@@ -71,6 +69,7 @@ export class App {
 	private routes () {
 
 		this.app.use(indexRoutes);
+		this.app.use('/apis/media', mediaRoute)
 
 	}
 

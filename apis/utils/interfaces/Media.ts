@@ -1,13 +1,12 @@
 export interface Media {
 
-{
+
     imgId: string,
 
-    mediaIsVideo: tinyint,
+    mediaIsVideo: 1,
 
     mediaDescription: string,
 
     mediaDate: string
 
-}
 }

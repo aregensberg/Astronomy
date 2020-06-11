@@ -9,7 +9,7 @@ import {connect} from "../../src/database";
 
  **/
 
-export async function getMediaByDescription() {
+export async function getMediaByDescription(mediaDescription:String) {
 
     try {
 
@@ -17,9 +17,9 @@ export async function getMediaByDescription() {
 
         const mysqlConnection = await connect()
 
-        const mySqlQuery = "SELECT BIN_TO_UUID(imgId) AS imgId, mediaIsVideo, mediaDescription, mediaDate FROM Media";
+        const mySqlQuery = "SELECT BIN_TO_UUID(imgId) AS imgId, mediaIsVideo, mediaDescription, mediaDate FROM media WHERE mediaDescription= :mediaDescription";
 
-        const [rows] = await mysqlConnection.execute(mySqlQuery)
+        const [rows] = await mysqlConnection.execute(mySqlQuery, {mediaDescription: mediaDescription})
 
         return rows
 

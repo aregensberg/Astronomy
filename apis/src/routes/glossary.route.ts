@@ -6,4 +6,3 @@ export const glossaryRoute = Router()
 
 glossaryRoute.route('/').get(getAllGlossaries)
 glossaryRoute.route("/:glossaryId").get(getGlossaryByGlossaryIdController)
-

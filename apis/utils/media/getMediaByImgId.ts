@@ -1,27 +1,25 @@
-
-import {media} from "../interfaces/Media";
-import {News} from "../interfaces/News";
-import {glossary} from "../interfaces/Glossary";
-
 import {connect} from "../../src/database";
 
 
 
-async function getMediaByImgId(misquoteId : string) : null | undefined {
+
+/**
+
+ * Helper function that grabs all misquotes
+
+ **/
+
+export async function getMediaByImgId(imgId:String) {
 
 	try {
 
-		const mysqlConnection = await connect();
 
 
+		const mysqlConnection = await connect()
 
-		const mySqlQuery = 'SELECT BIN_TO_UUID() as , , ,  FROM media WHERE = UUID_TO_BIN(:)'
+		const mySqlQuery = "SELECT BIN_TO_UUID(imgId) AS imgId, mediaIsVideo, mediaDescription, mediaDate FROM media WHERE imgId= :imgId";
 
-
-
-		const [rows] =  await mysqlConnection.execute(mySqlQuery, misquoteId)
-
-
+		const [rows] = await mysqlConnection.execute(mySqlQuery, {imgId: imgId})
 
 		return rows
 
@@ -34,7 +32,3 @@ async function getMediaByImgId(misquoteId : string) : null | undefined {
 	}
 
 }
-
-
-
-getMediaByImgId("uuid")

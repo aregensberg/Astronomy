@@ -1,5 +1,5 @@
 import {NextFunction, Request, Response} from "express";
-import {getAllGlossaries} from "../../utils/Glossary/getAllGlossaries";
+import {getAllGlossaries} from "../../utils/glossary/getAllGlossaries";
 import {Status} from "../../utils/interfaces/status";
 import {getGlossaryByGlossaryId} from "../../utils/glossary/getGlossaryByGlossaryId";
 

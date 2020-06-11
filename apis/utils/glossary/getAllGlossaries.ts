@@ -7,7 +7,7 @@ export async function getAllGlossaries() {
 
 		const mysqlConnection = await connect()
 
-		const mySqlQuery = "SELECT * FROM glossary";
+		const mySqlQuery = "SELECT BIN_TO_UUID(glossaryId) AS glossaryId, glossaryName, glossaryDefinition FROM glossary";
 
 		const [rows] = await mysqlConnection.execute(mySqlQuery)
 

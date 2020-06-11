@@ -8,7 +8,7 @@ export async function getAllNews() {
     try {
 
         const mysqlConnection = await connect()
-        const mySqlQuery = "SELECT BIN_TO_UUID(newsId) AS newsId, newsImg, newsDescription, newsUrl, newsTitle, newsDate FROM News";
+        const mySqlQuery = "SELECT * FROM news";
         const [rows] = await mysqlConnection.execute(mySqlQuery)
         return rows
     } catch (error) {

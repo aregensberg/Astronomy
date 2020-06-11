@@ -1,12 +1,7 @@
-import {NextFunction, Request, Response} from "express";
 import {getAllNews} from "../../utils/news/getAllNews";
-import {getNewsByDescription} from "../../utils/news/getNewsByDescription";
-import {getNewsByDescriptionAndTitle} from "../../utils/news/getNewsByDescriptionAndTitle";
-import {getNewsByNewsDate} from "../../utils/news/getNewsByNewsDate";
 import {getNewsByNewsId} from "../../utils/news/getNewsByNewsId";
-import {getNewsByNewsImg} from "../../utils/news/getNewsByNewsImg";
-import {getNewsByTitle} from "../../utils/news/getsNewsByTitle";
-import {News} from "../../utils/interfaces/News";
+import {NextFunction} from "express";
+import {Status} from "../../utils/interfaces/status";
 
 export async function getAllNewsController(request: Request, response: Response, nextFunction: NextFunction) {
 
@@ -28,111 +23,11 @@ export async function getAllNewsController(request: Request, response: Response,
 
 }
 
-export async function getNewsByDescriptionController(request: Request, response: Response, nextFunction: NextFunction) {
-
-	try {
-
-		const data = await getNewsByDescription(request.body.description)
-
-		console.log(data)
-
-		const status: Status = {status: 200, data, message: null}
-
-		return response.json(status)
-
-	} catch (error) {
-
-		console.log(error)
-
-	}
-
-}
-
-export async function getNewsByDescriptionAndTitleController(request: Request, response: Response, nextFunction: NextFunction) {
-
-	try {
-
-		const data = await getNewsByDescriptionAndTitle(request.body.description.title)
-
-		console.log(data)
-
-		const status: Status = {status: 200, data, message: null}
-
-		return response.json(status)
-
-	} catch (error) {
-
-		console.log(error)
-
-	}
-
-}
-
-export async function getNewsByNewsDateController(request: Request, response: Response, nextFunction: NextFunction) {
-
-	try {
-
-		const data = await getNewsByNewsDate(request.body.date)
-
-		console.log(data)
-
-		const status: Status = {status: 200, data, message: null}
-
-		return response.json(status)
-
-	} catch (error) {
-
-		console.log(error)
-
-	}
-
-}
-
 export async function getNewsByNewsIdController(request: Request, response: Response, nextFunction: NextFunction) {
 
 	try {
-
-		const data = await getNewsByNewsId(request.body.id)
-
-		console.log(data)
-
-		const status: Status = {status: 200, data, message: null}
-
-		return response.json(status)
-
-	} catch (error) {
-
-		console.log(error)
-
-	}
-
-}
-
-export async function getNewsByNewsImgController(request: Request, response: Response, nextFunction: NextFunction) {
-
-	try {
-
-		const data = await getNewsByNewsImg(request.body.image)
-
-		console.log(data)
-
-		const status: Status = {status: 200, data, message: null}
-
-		return response.json(status)
-
-	} catch (error) {
-
-		console.log(error)
-
-	}
-
-}
-
-export async function getNewsByTitleController(request: Request, response: Response, nextFunction: NextFunction) {
-
-	try {
-
-		const data = await getNewsByTitle(request.body.title)
+		const {newsId} = request.params
+		const data = await getNewsByNewsId(newsId)
 
 		console.log(data)
 

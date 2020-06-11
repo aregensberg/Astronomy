@@ -9,7 +9,7 @@ import morgan from 'morgan';
 // Routes
 
 import {indexRoutes} from './routes/index.route';
-
+import {newsRoute} from './routes/news.route';
 
 
 
@@ -71,6 +71,7 @@ export class App {
 	private routes () {
 
 		this.app.use(indexRoutes);
+		this.app.use(newsRoute);
 
 	}
 

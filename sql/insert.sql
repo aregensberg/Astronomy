@@ -1,0 +1,3 @@
+INSERT INTO glossary(glossaryId, glossaryName, glossaryDefinition) VALUES(UUID_TO_BIN(UUID()), "glossaryPlaceholderName", "glossaryPlaceholderDef")
+INSERT INTO media(mediaId, mediaIsVideo, mediaDescription, mediaDate) VALUES(UUID_TO_BIN(UUID()), 1, "mediaPlaceholderDescription", Now())
+INSERT INTO news(newsId, newsImg, newsDescription, newsUrl, newsTitle, newsDate) VALUES(UUID_TO_BIN(UUID()), "newsPlaceholderImg", "newsPlaceholderDesc", "newsPlaceholderUrl", "newsPlaceholderTitle", Now())

@@ -7,7 +7,7 @@ export async function insertMisquote(media: Media) {
 		const mySqlQuery = "INSERT INTO media(mediaId, imgId, mediaIsVideo, mediaDescription, mediaDate) VALUES(UUID_TO_BIN(UUID()), :imgId, :mediaIsVideo, :mediaDescription, :mediaDate)";
 
 		const [rows] = await mySqlConnection.execute(mySqlQuery, media)
-		return "Misquote created successfully"
+		return "Media created successfully"
 	} catch (error) {
 		console.log(error)
 	}

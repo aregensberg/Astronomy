@@ -9,11 +9,9 @@ export async function insertNews(News: News) {
 
 		const mySqlQuery = "INSERT INTO news(newsId, newsImg, newsDescription, newsUrl, newsTitle, newsDate) VALUES(UUID_TO_BIN(UUID()), :newsImg, :newsDescription, :newsUrl, :newsTitle, :newsDate)";
 
-
-
 		const [rows] = await mySqlConnection.execute(mySqlQuery, News)
 
-		return "Misquote created successfully"
+		return "News created successfully"
 
 	} catch (error) {
 

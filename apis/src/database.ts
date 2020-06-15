@@ -10,6 +10,7 @@ export async function connect (): Promise<Pool> {
 	const connection = await createPool({
 
 		host: process.env.HOST,
+		password: process.env.MYSQL_PASSWORD,
 		user: process.env.MYSQL_USER,
 		database: process.env.MYSQL_DATABASE,
 		connectionLimit: 10,

@@ -68,7 +68,7 @@ export class App {
 		this.app.use(indexRoutes);
 		this.app.use('/apis/media', mediaRoute);
 
-		this.app.use(newsRoute);
+		this.app.use('/apis/news', newsRoute);
 
 
 		this.app.use('/apis/glossary', glossaryRoute)

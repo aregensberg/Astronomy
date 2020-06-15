@@ -1,4 +1,4 @@
-import {Glossary} from "../interfaces/glossary";
+import {Glossary} from "../interfaces/Glossary";
 import {connect} from "../../src/database";
 
 export async function insertGlossary(glossary: Glossary) {
@@ -12,3 +12,7 @@ export async function insertGlossary(glossary: Glossary) {
 		console.log(error)
 	}
 }
+
+const glossary = {glossaryId: null, glossaryName: "Hello", glossaryDefinition: "World"}
+insertGlossary(glossary).catch(error => console.error(error))
+console.log(process.env)

@@ -13,8 +13,10 @@ export interface Media {
     mediaDate: string
 
 }
-function dataDownloaderMedia() : Promise<any> {
+
+function dataDownloaderMedia(): Promise<any> {
     return main()
+
     async function main() {
         try {
             await downloadMedia()
@@ -26,24 +28,26 @@ function dataDownloaderMedia() : Promise<any> {
 
     async function downloadMedia() {
         try {
-            const {data} = await axios.get("hubblesite.org/api/v3/images/all")
+            const {data} = await axios.get("http://hubblesite.org/api/v3/images/all")
 
-            const createMedia = (array: any[]) : Media[] => {
+            const createMedia = (array: any[]) => {
                 //instead of putting the posts into an array insert them into the database.
-                const  media : Media[] = []
-                for(let currentMedia of array) {
-                    let media : Media = {mediaId: currentMedia.Id, mediaIsVideo: currentMedia.name, mediaDescription: , mediaDate: }
-                    media.push(media)
+                // const  media : Media[] = []
+                for (let currentMedia of array) {
+                    // TODO for each current media make an axios request to get detailed information for image
+                    // TODO decide what fields we want to use to create media and set media is video to 0
+                    // let media : Media = {mediaId: currentMedia.Id, mediaIsVideo: currentMedia.name, mediaDescription: , mediaDate: }
+                    // media.push(media)
                 }
-                return media
+                // return media
             }
 
-            console.log(createMedia(data))
-
+        createMedia(data)
         } catch (error) {
             console.error(error)
         }
     }
 }
+
 ​
-dataDownloader().catch(error => console.error(error))
+dataDownloaderMedia().catch(error => console.error(error))

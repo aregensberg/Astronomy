@@ -1,4 +1,4 @@
-import {News} from "../interfaces/news";
+import {News} from "../interfaces/News";
 import {connect} from "../../src/database";
 
 export async function insertNews(News: News) {

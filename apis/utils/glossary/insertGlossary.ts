@@ -13,6 +13,4 @@ export async function insertGlossary(glossary: Glossary) {
 	}
 }
 
-const glossary = {glossaryId: null, glossaryName: "Hello", glossaryDefinition: "World"}
-insertGlossary(glossary).catch(error => console.error(error))
-console.log(process.env)
+

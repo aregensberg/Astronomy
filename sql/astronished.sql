@@ -13,7 +13,7 @@ CREATE TABLE media(
 CREATE TABLE glossary(
     glossaryId binary(16) not null,
     glossaryName varchar(255) not null,
-    glossaryDefinition varchar(255) not null,
+    glossaryDefinition varchar(1024) not null,
     primary key (glossaryId)
 );
 

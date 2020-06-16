@@ -23,7 +23,7 @@ function dataDownloader() : Promise<any> {
 
     async function downloadNews() {
         try {
-            const {data} = await axios.get("http://hubblesite.org/api/v3/news?page=all")
+            const {data} = await axios.get("http://hubblesite.org/api/v3/news_release/last")
             console.log(data)
             const createNews = async (array: any[]) => {
                 //instead of putting the posts into an array insert them into the database.

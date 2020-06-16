@@ -2,7 +2,7 @@ import {NextFunction, Request, Response} from "express";
 import {getAllGlossaries} from "../../utils/glossary/getAllGlossaries";
 import {Status} from "../../utils/interfaces/status";
 import {getGlossaryByGlossaryId} from "../../utils/glossary/getGlossaryByGlossaryId";
-
+import {validationResult} from "express-validator";
 
 export async function getAllGlossariesController(request: Request, response: Response, nextFunction: NextFunction) {
 

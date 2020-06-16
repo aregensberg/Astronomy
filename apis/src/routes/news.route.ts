@@ -1,5 +1,5 @@
 import {getNewsByNewsIdController} from "../controllers/news.controller";
-import {getAllNews} from "../../utils/news/getAllNews";
+import {getAllNews} from '../../utils/news/getAllNews';
 import {Router} from "express";
 
 export const newsRoute = Router()

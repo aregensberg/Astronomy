@@ -1,7 +1,7 @@
 export interface Media {
 
 
-    imgId: string,
+    mediaId: string,
 
     mediaIsVideo: 1,
 

@@ -30,6 +30,7 @@ function dataDownloaderGlossary() : Promise<any> {
 				}
 			}
 
+			await createGlossaries(data)
 		} catch (error) {
 			console.error(error)
 		}

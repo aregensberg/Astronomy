@@ -10,7 +10,7 @@ export async function getGlossaryByGlossaryId(glossaryId:String) {
 		return rows
 
 	} catch (error) {
-		console.log(error)
+		console.error(error.message)
 		return undefined
 	}
 }

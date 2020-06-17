@@ -9,7 +9,7 @@ export async function insertGlossary(glossary: Glossary) {
 		const [rows] = await mySqlConnection.execute(mySqlQuery, glossary)
 		return "Glossary created successfully"
 	} catch (error) {
-		console.log(error)
+		console.error(error.message)
 	}
 }
 

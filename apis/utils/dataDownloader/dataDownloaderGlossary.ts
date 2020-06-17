@@ -37,4 +37,4 @@ function dataDownloaderGlossary() : Promise<any> {
 	}
 }
 
-dataDownloaderGlossary().catch(error => console.error(error))
+dataDownloaderGlossary().catch(error => console.error(error.message))

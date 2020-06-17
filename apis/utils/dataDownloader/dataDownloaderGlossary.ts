@@ -14,7 +14,7 @@ function dataDownloaderGlossary() : Promise<any> {
 			await downloadGlossary()
 
 		} catch (e) {
-			console.log(e)
+			console.error(e.message)
 		}
 	}
 
@@ -23,7 +23,6 @@ function dataDownloaderGlossary() : Promise<any> {
 			const {data} = await axios.get("http://hubblesite.org/api/v3/glossary?page=all")
 			const createGlossaries = async (array: any[]) => {
 				//instead of putting the posts into an arrray insert them into the database.
-				const  Glossaries : Glossary[] = []
 				for(let currentGlossary of array) {
 					let object : Glossary = {glossaryId: null, glossaryName: currentGlossary.name, glossaryDefinition: currentGlossary.definition}
 					await insertGlossary(object)

@@ -12,7 +12,5 @@ export async function getAllGlossaries() {
 	} catch (error) {
 		console.error(error.message)
 		return undefined
-
 	}
-
 }

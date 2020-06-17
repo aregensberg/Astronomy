@@ -4,6 +4,7 @@ import {Status} from "../../utils/interfaces/status";
 import {getGlossaryByGlossaryId} from "../../utils/glossary/getGlossaryByGlossaryId";
 import {validationResult} from "express-validator";
 
+
 export async function getAllGlossariesController(request: Request, response: Response, nextFunction: NextFunction) {
 	try {
 		const data = await getAllGlossaries()

@@ -19,7 +19,6 @@ export async function connect (): Promise<Pool> {
 	});
 
 	//@ts-ignore
-	console.log(process)
 	return connection;
 
 }

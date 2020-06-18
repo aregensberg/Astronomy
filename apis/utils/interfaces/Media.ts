@@ -1,12 +1,15 @@
 export interface Media {
 
 
-    mediaId: string,
+    mediaId: string | null,
 
-    mediaIsVideo: 1,
+    mediaIsVideo: number,
 
     mediaDescription: string,
 
-    mediaDate: string
+    mediaAlt: string,
+
+    mediaUrl: string,
+
 
 }

@@ -5,24 +5,21 @@ import {indexRoutes} from './routes/index.route';
 import {newsRoute} from './routes/news.route';
 import {mediaRoute} from "./routes/media.route";
 import {glossaryRoute} from "./routes/glossary.route";
+import {MemoryStore} from "express-session";
 
+//const cookieParser = require('cookie-parser')
 
 // The following class creates the app and instantiates the server
 
 export class App {
-
 	app: Application;
-
 	constructor (
-
 		private port?: number | string
-
 	) {
 		this.app = express();
 		this.settings();
 		this.middlewares();
 		this.routes();
-
 	}
 
 	// private method that sets the port for the sever, to one from index.route.ts, and external .env file or defaults to 3000
@@ -36,14 +33,13 @@ export class App {
 	private middlewares () {
 		this.app.use(morgan('dev'));
 		this.app.use(express.json());
-	}
-
+	 }
 
 	// private method for setting up routes in their basic sense (ie. any route that performs an action on profiles starts with /profiles)
 
 	private routes () {
 
-		this.app.use(indexRoutes);
+		this.app.use('/apis', indexRoutes);
 		this.app.use('/apis/media', mediaRoute);
 		this.app.use('/apis/news', newsRoute);
 		this.app.use('/apis/glossary', glossaryRoute)
@@ -55,7 +51,5 @@ export class App {
 	public async listen (): Promise<void> {
 		await this.app.listen(this.app.get('port'));
 		console.log('Server on port', this.app.get('port'));
-
 	}
-
 }

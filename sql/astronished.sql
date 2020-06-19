@@ -20,8 +20,8 @@ CREATE TABLE glossary(
 
 CREATE TABLE news(
     newsId binary(16) not null,
-    newsImg varchar(255) not null,
-    newsDescription varchar(255) not null,
+    newsImg varchar(1024) not null,
+    newsDescription varchar(2048) not null,
     newsUrl varchar(255) not null,
     newsTitle varchar(255) not null,
     newsDate datetime(3) not null,

@@ -1,7 +1,7 @@
 import {getAllNews} from "../../utils/news/getAllNews";
 import {getNewsByNewsId} from "../../utils/news/getNewsByNewsId";
-import {Request, Response, NextFunction} from "express";
 import {Status} from "../../utils/interfaces/status";
+import {NextFunction, Request, Response} from "express";
 
 
 export async function getAllNewsController(request: Request, response: Response, nextFunction: NextFunction) {

@@ -10,7 +10,6 @@ export async function getAllGlossariesController(request: Request, response: Res
 
 		const data = await getAllGlossaries()
 
-		console.log(data)
 
 		const status: Status = {status: 200, data, message: null}
 
@@ -18,7 +17,7 @@ export async function getAllGlossariesController(request: Request, response: Res
 
 	} catch (error) {
 
-		console.log(error)
+		console.log(error.error)
 
 	}
 

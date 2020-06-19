@@ -10,7 +10,6 @@ export async function getAllNewsController(request: Request, response: Response,
 
 		const data = await getAllNews()
 
-		console.log(data)
 
 		const status: Status = {status: 200, data, message: null}
 
@@ -18,7 +17,7 @@ export async function getAllNewsController(request: Request, response: Response,
 
 	} catch (error) {
 
-		console.log(error)
+		console.log(error.msg)
 
 	}
 

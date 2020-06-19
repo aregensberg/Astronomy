@@ -1,7 +1,19 @@
 import axios from "axios"
 import {insertMedia} from "../media/insertMedia"
-import {Media} from "../interfaces/Media";
+// import {Media} from "../interfaces/Media";
 
+interface Media {
+    mediaId: string | null,
+
+    mediaIsVideo: number,
+
+    mediaDescription: string,
+
+    mediaAlt: string,
+
+    mediaUrl: string,
+
+}
 
 
 function dataDownloaderMedia(): Promise<any> {
@@ -10,7 +22,7 @@ function dataDownloaderMedia(): Promise<any> {
         try {
             await downloadMedia()
         } catch (e) {
-            console.log(e.msg)
+            console.error(e.msg)
         }
     }
 

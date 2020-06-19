@@ -6,7 +6,7 @@ export async function insertNews(news: News) {
 	try {
 		const mySqlConnection = await connect()
 
-		const mySqlQuery = "INSERT INTO news(newsId, newsImg, newsDescription, newsUrl, newsTitle, newsDate) VALUES(UUID_TO_BIN(UUID()),  :misquoteAttribution, :misquoteContent, :misquoteSubmitter)";
+		const mySqlQuery = "INSERT INTO news(newsId, newsImg, newsDescription, newsUrl, newsTitle, newsDate) VALUES(UUID_TO_BIN(UUID()),  :newsImg, :newsDescription, :newsUrl, newsTitle, newsDate)";
 		const [rows] = await mySqlConnection.execute(mySqlQuery, news)
 
 		return "News created successfully"

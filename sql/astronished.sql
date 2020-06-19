@@ -4,9 +4,10 @@ DROP TABLE IF EXISTS news;
 
 CREATE TABLE media(
     mediaId binary(16) not null,
-    mediaIsVideo tinyint not null,
+    mediaAlt varchar(128) not null,
     mediaDescription varchar(512) not null,
-    mediaDate datetime(3) not null,
+    mediaIsVideo tinyint not null,
+    mediaUrl varchar(300) not null ,
     primary key (mediaId)
 );
 
@@ -30,7 +31,5 @@ CREATE TABLE news(
 
 INSERT INTO glossary(glossaryId, glossaryName, glossaryDefinition) VALUES(UUID_TO_BIN(UUID()), "glossaryPlaceholderName", "glossaryPlaceholderDef");
 INSERT INTO glossary(glossaryId, glossaryName, glossaryDefinition) VALUES(UUID_TO_BIN(UUID()), "Cool glossary entry", "Cool definitionf");
-INSERT INTO media(mediaId, mediaIsVideo, mediaDescription, mediaDate) VALUES(UUID_TO_BIN(UUID()), 1, "mediaPlaceholderDescription", Now());
-INSERT INTO media(mediaId, mediaIsVideo, mediaDescription, mediaDate) VALUES(UUID_TO_BIN(UUID()), 1, "Excellent video description", Now());
 INSERT INTO news(newsId, newsImg, newsDescription, newsUrl, newsTitle, newsDate) VALUES(UUID_TO_BIN(UUID()), "newsPlaceholderImg", "newsPlaceholderDesc", "newsPlaceholderUrl", "newsPlaceholderTitle", Now());
 INSERT INTO news(newsId, newsImg, newsDescription, newsUrl, newsTitle, newsDate) VALUES(UUID_TO_BIN(UUID()), "Awesome news picture", "Awesome news description", "https://thisisa.url", "Awesome title", Now());

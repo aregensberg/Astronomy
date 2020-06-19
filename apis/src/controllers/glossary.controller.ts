@@ -8,10 +8,21 @@ import {getGlossaryByGlossaryId} from "../../utils/glossary/getGlossaryByGlossar
 export async function getAllGlossariesController(request: Request, response: Response, nextFunction: NextFunction) {
 	try {
 		const data = await getAllGlossaries()
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/sprint-3
 		const status: Status = {status: 200, data, message: null}
 		return response.json(status)
 	} catch (error) {
+<<<<<<< HEAD
 		console.error(error.message)
+=======
+
+		console.log(error.error)
+
+>>>>>>> origin/sprint-3
 	}
 }
 

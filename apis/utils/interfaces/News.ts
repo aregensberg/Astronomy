@@ -1,5 +1,5 @@
 export interface News {
-    newsId: string,
+    newsId: string | null,
     newsImg: string,
     newsDescription: string,
     newsUrl: string,

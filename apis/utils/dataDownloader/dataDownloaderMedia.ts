@@ -47,5 +47,5 @@ function dataDownloaderMedia(): Promise<any> {
 }
 
 ​
-dataDownloaderMedia().catch(error => console.error(error))
+dataDownloaderMedia().catch(error => console.error(error.msg))
 

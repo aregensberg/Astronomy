@@ -25,7 +25,7 @@ export async function getAllMedia() {
 
     } catch (error) {
 
-        console.log(error)
+        console.error(error.msg)
 
         return undefined
 

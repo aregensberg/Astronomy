@@ -39,14 +39,6 @@ function dataDownloaderMedia(): Promise<any> {
                         let media : Media = {mediaId: null, mediaIsVideo: 0, mediaAlt: detailedMedia.data.name, mediaDescription: detailedMedia.data.description, mediaUrl: detailedMedia.data.image_files[0].file_url}
                         await insertMedia(media)
                     }
-
-
-                    // TODO for each current media make an axios request to get detailed information for image
-                    // TODO decide what fields we want to use to create media and set media is video to 0
-
-
-                    // let media : Media = {mediaId: currentMedia.Id, mediaIsVideo: currentMedia.name, mediaDescription: , mediaDate: }
-                    // media.push(media)
                 }
                 // return media
             }
@@ -58,6 +50,5 @@ function dataDownloaderMedia(): Promise<any> {
     }
 }
 
-​
 dataDownloaderMedia().catch(error => console.error(error.msg))
 

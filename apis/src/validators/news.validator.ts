@@ -1,4 +1,3 @@
-
 export const newsIdValidator = {
     newsId:{
         isUUID: {

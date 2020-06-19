@@ -10,7 +10,6 @@ export const newsRoute = Router()
 
 newsRoute.route('/')
     .get(getAllNewsController)
+
 newsRoute.route('/:newsId')
     .get(asyncValidatorController(checkSchema(newsIdValidator)), getNewsByNewsIdController)
-
-// newsRoute.route("/newsId/:newsId").get(getNewsByNewsIdController)

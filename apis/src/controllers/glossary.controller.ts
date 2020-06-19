@@ -4,21 +4,13 @@ import {getAllGlossaries} from "../../utils/glossary/getAllGlossaries";
 import {getGlossaryByGlossaryId} from "../../utils/glossary/getGlossaryByGlossaryId";
 
 
-
 export async function getAllGlossariesController(request: Request, response: Response, nextFunction: NextFunction) {
 	try {
 		const data = await getAllGlossaries()
-
-
-
-
 		const status: Status = {status: 200, data, message: null}
 		return response.json(status)
 	} catch (error) {
 		console.error(error.message)
-
-		console.log(error.error)
-
 	}
 }
 

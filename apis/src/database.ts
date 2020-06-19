@@ -19,7 +19,10 @@ export async function connect (): Promise<Pool> {
 	});
 
 	//@ts-ignore
+<<<<<<< HEAD
 
+=======
+>>>>>>> dad7e819d468f77a7461587186e6796801932bb6
 	return connection;
 
 }

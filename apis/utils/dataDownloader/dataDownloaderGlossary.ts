@@ -1,6 +1,7 @@
 import axios from "axios"
 import {insertGlossary} from "../glossary/insertGlossary";
 
+
 interface Glossary {
 	glossaryId: string | null
 	glossaryName: string

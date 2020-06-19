@@ -33,3 +33,5 @@ INSERT INTO glossary(glossaryId, glossaryName, glossaryDefinition) VALUES(UUID_T
 INSERT INTO glossary(glossaryId, glossaryName, glossaryDefinition) VALUES(UUID_TO_BIN(UUID()), "Cool glossary entry", "Cool definitionf");
 INSERT INTO news(newsId, newsImg, newsDescription, newsUrl, newsTitle, newsDate) VALUES(UUID_TO_BIN(UUID()), "newsPlaceholderImg", "newsPlaceholderDesc", "newsPlaceholderUrl", "newsPlaceholderTitle", Now());
 INSERT INTO news(newsId, newsImg, newsDescription, newsUrl, newsTitle, newsDate) VALUES(UUID_TO_BIN(UUID()), "Awesome news picture", "Awesome news description", "https://thisisa.url", "Awesome title", Now());
+INSERT INTO media(mediaId, mediaIsVideo, mediaDescription, mediaAlt, mediaUrl) VALUES(UUID_TO_BIN(UUID()), 1, "mediaPlaceholder", "mediaPlaceholderImg", "https://img.url", Now());
+INSERT INTO media(mediaId, mediaIsVideo, mediaDescription, mediaAlt, mediaUrl) VALUES(UUID_TO_BIN(UUID()), 1, "mediaAnotherPlaceholder", "mediaAnotherPlaceholderImg", "https://anotherimg.url", Now());

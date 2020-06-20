@@ -12,7 +12,6 @@ import {Media} from './pages/Media'
 import {News} from './pages/News'
 
 
-
 const Routing = () => (
   <BrowserRouter>
    <Switch>

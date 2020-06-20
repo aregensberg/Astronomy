@@ -5,20 +5,17 @@ const slice = createSlice({
   name: "news",
   initialState: [],
   reducers:  {
-    getAllNews : (posts, action) => {
+    getAllNews : (news, action) => {
       return action.payload
     },
-    getNewsByNewsId: (posts, action) => {
-      posts.push(action.payload)
-    }
   }
 })
 
-export const {getMisquoteByMisquoteId, getAllMisquotes} = slice.actions
+export const {getAllNews} = slice.actions
 
-export const fetchAllMisquotes = () => async (dispatch) => {
-  const {data} = await httpConfig(`/apis/misquote`)
-  dispatch(getAllMisquotes(data))
+export const fetchAllNews = () => async (dispatch) => {
+  const {data} = await httpConfig(`/apis/news`)
+  dispatch(getAllNews(data))
 }
 
 export default slice.reducer

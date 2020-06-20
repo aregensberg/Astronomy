@@ -9,17 +9,17 @@ import { fetchAllMedia } from '../store/media'
 
 
 export function Landing() {
-  const dispatch = useDispatch()
-
   const media = useSelector(store => {
-    console.log("Redux Store", store)
+    // console.log("Redux Store", store)
     return store.media ? store.media : []
   })
+
+  const dispatch = useDispatch()
+
   const sideEffects = () => {
-    dispatch(fetchAllMedia)
+    dispatch(fetchAllMedia())
   }
   React.useEffect(sideEffects, [])
-  console.log(media)
   return (
   <>
 
@@ -48,7 +48,7 @@ export function Landing() {
       <div className="Card p-5 mx-2">
         <h5 className="card-title">Photo Of The Day</h5>
         <div className="Card.Body p-0">
-          <img src="https://cdn.images.express.co.uk/img/dynamic/151/590x/NASA-news-Hubble-space-telescope-galaxy-Messier-90-Milky-Way-collide-1132007.jpg?r=1558991836477" height="250" width="500"  alt="Galaxy" />
+          {media.length ? <img src={media[Math.round(Math.random() * (media.length - 1))].mediaUrl} height="auto" width="500"  alt="Random Hubble image" /> : ""}
         </div>
       </div>
     </CardColumns>

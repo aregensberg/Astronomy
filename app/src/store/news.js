@@ -1,5 +1,6 @@
 import { createAction, createSlice } from '@reduxjs/toolkit'
 import {httpConfig} from "../utils/http-config"
+import {news} from 'apis/utils/news'
 
 const slice = createSlice({
   name: "news",
@@ -16,7 +17,7 @@ const slice = createSlice({
 
 export const {getNewsByNewsId, getAllNews} = slice.actions
 
-export const fetchAllNewss = () => async (dispatch) => {
+export const fetchAllNews = () => async (dispatch) => {
   const {data} = await httpConfig(`/apis/news`)
   dispatch(getAllNews(data))
 }

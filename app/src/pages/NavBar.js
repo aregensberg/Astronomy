@@ -1,12 +1,13 @@
 import React from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
+import Container from 'react-bootstrap/Container'
 
 
 export function NavBar() {
   return(
     <>
-      <container>
+      <Container>
       <Navbar bg="light" variant="light">
         <Navbar.Brand href="#home">Astronomy</Navbar.Brand>
         <Nav className="mr-auto">
@@ -15,6 +16,6 @@ export function NavBar() {
           <Nav.Link href="#news">News</Nav.Link>
         </Nav>
       </Navbar>
-      </container>
+      </Container>
     </>
   )}

@@ -3,23 +3,25 @@ import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed'
 import Card from 'react-bootstrap/Card'
 import CardColumns from 'react-bootstrap/CardColumns'
 import Button from 'react-bootstrap/Button'
-import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchAllMedia } from '../store/media'
 
 
 export function Landing() {
+  const dispatch = useDispatch()
+
+  const media = useSelector(store => {
+    console.log("Redux Store", store)
+    return store.media ? store.media : []
+  })
+  const sideEffects = () => {
+    dispatch(fetchAllMedia)
+  }
+  React.useEffect(sideEffects, [])
+  console.log(media)
   return (
   <>
-    <container>
-      <Navbar bg="light" variant="light">
-        <Navbar.Brand href="#home">Astronomy</Navbar.Brand>
-        <Nav className="mr-auto">
-          <Nav.Link href="#media">Media</Nav.Link>
-          <Nav.Link href="#glossary">Glossary</Nav.Link>
-          <Nav.Link href="#news">News</Nav.Link>
-        </Nav>
-      </Navbar>
-    </container>
 
 
 

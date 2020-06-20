@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom'
 import 'bootstrap/dist/css/bootstrap.css'
 import { BrowserRouter } from 'react-router-dom'
 import { Route, Switch } from 'react-router'
+import { configureStore } from '@reduxjs/toolkit'
+import reducer from "./store"
+import { Provider } from 'react-redux'
 
 import {FourOhFour} from "./pages/FourOhFour";
 import {Glossary} from './pages/Glossary'
@@ -12,8 +15,14 @@ import {Media} from './pages/Media'
 import {News} from './pages/News'
 
 
-const Routing = () => (
+const store = configureStore({reducer})
+const Routing = (store) => (
+
+  <>
+     <Provider store={store}>
+       <React.StrictMode>
   <BrowserRouter>
+     <NavBar/>
    <Switch>
       <Route exact path="/" component={Landing}/>
       <Route exact path="/Glossary" component={Glossary}/>
@@ -22,9 +31,10 @@ const Routing = () => (
       <Route component={FourOhFour}/>
    </Switch>
   </BrowserRouter>
-)
-
-ReactDOM.render(
-  <Routing />,
-  document.getElementById('root')
+       </React.StrictMode>
+     </Provider>
+     </>
 );
+
+ReactDOM.render(Routing(store), document.querySelector('#root'));
+

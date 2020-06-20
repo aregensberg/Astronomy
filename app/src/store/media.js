@@ -1,24 +1,23 @@
 import { createAction, createSlice } from '@reduxjs/toolkit'
 import {httpConfig} from "../utils/http-config"
-import {media} from '/apis/utils/media'
 
 
 const slice = createSlice({
   name: "media",
   initialState: [],
   reducers:  {
-    getAllMedia : () => {
+    getAllMedia : (media, action) => {
       return action.payload
     },
-    getMediaByMediaId: () => {
-      posts.push(action.payload)
-    }
+    // getMediaByMediaId: () => {
+    //   media.push(action.payload)
+    // }
   }
 })
 
-export const {getMediaByMediaId, getAllMedia} = slice.actions
+export const { getAllMedia} = slice.actions
 
-export const getAllMedia = () => async (dispatch) => {
+export const fetchAllMedia = () => async (dispatch) => {
   const {data} = await httpConfig(`/apis/media/`)
   dispatch(getAllMedia(data))
 }

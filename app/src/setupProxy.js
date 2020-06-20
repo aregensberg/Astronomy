@@ -4,8 +4,8 @@ module.exports = function (app) {
 
   app.use(proxy('/apis', {
       logLevel: 'debug',
-      target: "http://165.227.63.163:8080/",
-      changeOrigin: true,
-    }
+      target: "http://167.172.209.28:8080/",
+        changeOrigin: true,
+          }
   ));
 };

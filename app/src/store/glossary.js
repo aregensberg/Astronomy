@@ -20,8 +20,8 @@ const slice = createSlice({
 export const {getGlossaryByGlossaryId, getAllGlossaries} = slice.actions
 
 export const fetchAllGlossaries = () => async (dispatch) => {
-  const {data} = await httpConfig(`/apis/glossary`)
-  dispatch(getAllMisquotes(data))
+  const {data} = await httpConfig(`/apis/glossary/`)
+  dispatch(getAllGlossaries(data))
 }
 
 export default slice.reducer

@@ -14,11 +14,11 @@ const slice = createSlice({
   }
 })
 
-export const {getMisquoteByMisquoteId, getAllMisquotes} = slice.actions
+export const {getNewsByNewsId, getAllNews} = slice.actions
 
-export const fetchAllMisquotes = () => async (dispatch) => {
-  const {data} = await httpConfig(`/apis/misquote`)
-  dispatch(getAllMisquotes(data))
+export const fetchAllNewss = () => async (dispatch) => {
+  const {data} = await httpConfig(`/apis/news`)
+  dispatch(getAllNews(data))
 }
 
 export default slice.reducer

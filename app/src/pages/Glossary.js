@@ -35,10 +35,6 @@ export function Glossary() {
         </div>
 
 
-
-
-
-
 {/*export function Glossary() {*/}
 {/*    return(*/}
 {/*      <>*/}

@@ -3,9 +3,9 @@ import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed'
 import Card from 'react-bootstrap/Card'
 import CardColumns from 'react-bootstrap/CardColumns'
 import Button from 'react-bootstrap/Button'
-import Nav from 'react-bootstrap/Nav'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchAllMedia } from '../store/media'
+
 
 
 export function Landing() {
@@ -54,17 +54,6 @@ export function Landing() {
     </CardColumns>
     </div>
 
-    <div>
-      <footer>
-        <div className="bg-light p-2">
-          <Nav className="mr-auto justify-content-center">
-            <Nav.Link href="#media">Media</Nav.Link>
-            <Nav.Link href="#glossary">Glossary</Nav.Link>
-            <Nav.Link href="#news">News</Nav.Link>
-          </Nav>
-        </div>
-      </footer>
-    </div>
   </>
     )
     }

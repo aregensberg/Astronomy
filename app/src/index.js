@@ -7,6 +7,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import reducer from "./store"
 import { Provider } from 'react-redux'
 
+import {Footer} from './pages/Footer'
 import {FourOhFour} from "./pages/FourOhFour";
 import {Glossary} from './pages/Glossary'
 import {Landing} from './pages/Landing'
@@ -30,6 +31,7 @@ const Routing = (store) => (
       <Route exact path="/News" component={News}/>
       <Route component={FourOhFour}/>
    </Switch>
+    <Footer/>
   </BrowserRouter>
        </React.StrictMode>
      </Provider>

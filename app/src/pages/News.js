@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchAllNews } from '../store/news'
 import { NewsCard } from './NewsCard'
+import {NavBar} from './NavBar'
 
 export function News() {
   const news = useSelector(store => {

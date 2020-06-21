@@ -5,6 +5,7 @@ import CardColumns from 'react-bootstrap/CardColumns'
 import Button from 'react-bootstrap/Button'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchAllMedia } from '../store/media'
+import Nav from 'react-bootstrap/Nav'
 
 
 
@@ -32,8 +33,16 @@ export function Landing() {
 
     <div className="m-5 p-2">
       <div className="p-2 mx-5">
-      <Button variant="primary" size="lg">NEWS</Button>{' '}
-      </div>
+
+        {/*activeKey="/News">*/}
+        {/*<Nav.Item>*/}
+        {/*  <Nav.Link href="/News">News</Nav.Link>*/}
+        {/*</Nav.Item>*/}
+
+        <Button href="/News">News</Button>{' '}
+
+      {/*<Button variant="primary" size="lg">NEWS</Button>{' '}*/}
+      {/*</div>*/}
 
     <CardColumns>
       <div className="card p-2">
@@ -52,6 +61,7 @@ export function Landing() {
         </div>
       </div>
     </CardColumns>
+    </div>
     </div>
 
   </>

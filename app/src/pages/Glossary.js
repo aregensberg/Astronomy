@@ -6,14 +6,6 @@ export function Glossary() {
     return(
       <>
         <div id="glossary">
-        <Navbar bg="light" variant="light">
-          <Navbar.Brand href="#home">Astronomy</Navbar.Brand>
-          <Nav className="mr-auto">
-            <Nav.Link href="#media">Media</Nav.Link>
-            <Nav.Link href="#glossary">Glossary</Nav.Link>
-            <Nav.Link href="#news">News</Nav.Link>
-          </Nav>
-        </Navbar>
         <div className="container text-center">
             <div className="row">
               <div className="col">
@@ -70,17 +62,6 @@ export function Glossary() {
                 steal mom's crouton while she is in the bathroom chase the pig around the house. </p>
             </div>
           </div>
-        </div>
-        <div>
-          <footer>
-            <div className="bg-light p-2">
-              <Nav className="mr-auto justify-content-center">
-                <Nav.Link href="#media">Media</Nav.Link>
-                <Nav.Link href="#glossary">Glossary</Nav.Link>
-                <Nav.Link href="#news">News</Nav.Link>
-              </Nav>
-            </div>
-          </footer>
         </div>
         </div>
       </>

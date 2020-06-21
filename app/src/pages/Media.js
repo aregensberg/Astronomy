@@ -118,7 +118,6 @@ export function Media() {
 {/*Video carousel*/}
 
       <Carousel>
-
         <Carousel.Item>
           <img
             className="d-block w-100"
@@ -126,39 +125,7 @@ export function Media() {
             alt="Third slide"
           />
         </Carousel.Item>
-
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://thesigndude.com/wp-content/uploads/2017/09/video-placeholder.jpg"
-            alt="Third slide"
-          />
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://thesigndude.com/wp-content/uploads/2017/09/video-placeholder.jpg"
-            alt="Third slide"
-          />
-        </Carousel.Item>
-
       </Carousel>
-
-
-{/*Footer*/}
-      <div>
-        <footer>
-          <div className="bg-light p-2">
-            <Nav className="mr-auto justify-content-center">
-              <Nav.Link href="#media">Media</Nav.Link>
-              <Nav.Link href="#glossary">Glossary</Nav.Link>
-              <Nav.Link href="#news">News</Nav.Link>
-            </Nav>
-          </div>
-        </footer>
-      </div>
-
     </>
   )
 }

@@ -37,7 +37,6 @@ export function NavBar() {
         </Nav>
         </Nav>
       </Container>
-
     </>
   )}
 

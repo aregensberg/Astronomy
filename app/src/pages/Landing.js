@@ -8,7 +8,6 @@ import { fetchAllMedia } from '../store/media'
 import Nav from 'react-bootstrap/Nav'
 
 
-
 export function Landing() {
   const media = useSelector(store => {
     // console.log("Redux Store", store)
@@ -24,14 +23,11 @@ export function Landing() {
   return (
   <>
 
-
-
     <div className="jumbotron">
         <img src="https://www.sciencealert.com/images/2020-05/processed/frb_topic_cover_nasa_1024.jpg" alt="Galaxy of stars"/>
     </div>
+    <div className="m-5 p-2 ">
 
-
-    <div className="m-5 p-2">
       <div className="p-2 mx-5">
 
         {/*activeKey="/News">*/}
@@ -63,7 +59,6 @@ export function Landing() {
     </CardColumns>
     </div>
     </div>
-
   </>
     )
     }

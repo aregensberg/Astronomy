@@ -1,6 +1,6 @@
 import { createAction, createSlice } from '@reduxjs/toolkit'
 import {httpConfig} from "../utils/http-config"
-import {news} from 'apis/utils/news'
+
 
 const slice = createSlice({
   name: "news",

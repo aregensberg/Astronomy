@@ -18,7 +18,7 @@ const slice = createSlice({
 export const { getAllMedia} = slice.actions
 
 export const fetchAllMedia = () => async (dispatch) => {
-  const {data} = await httpConfig(`/apis/media/`)
+  const {data} = await httpConfig(`/apis/media`)
   dispatch(getAllMedia(data))
 }
 

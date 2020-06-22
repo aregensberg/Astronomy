@@ -23,8 +23,8 @@ export function Glossary() {
     <>
       <div id="glossary">
         <div className="container text-center">
-          <div className="row">
-            <div className="col">
+          <div className="row mx-md-3">
+            <div className="col p-2 mx-auto">
               <h1>GLOSSARY</h1>
             </div>
           </div>

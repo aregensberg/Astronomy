@@ -7,8 +7,7 @@ export function NewsCard({newsItem}) {
     <>
       <Media>
         <img
-          width={400}
-          height={400}
+          width={300}
           className="mr-3"
           src={newsItem.newsImg}
           alt="news image"

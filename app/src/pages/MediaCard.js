@@ -1,6 +1,7 @@
 import React from 'react'
 import CardColumns from 'react-bootstrap/CardColumns'
 import Card from 'react-bootstrap/Card'
+import Col from 'react-bootstrap/Col'
 
 export function MediaCard({mediaItem}) {
 
@@ -8,9 +9,9 @@ export function MediaCard({mediaItem}) {
 
 <div className="container">
 <cardDeck>
-    <div className="card mb-3">
-      <Card border={'primary'}>
-        <Card.Img variant="top" src={mediaItem.mediaUrl} width="150rem" alt="media image" />
+    <div className="card-group mb-3">
+      <Card border={'primary'} bg={'light'}>
+        <Card.Img className="centered" variant="top" src={mediaItem.mediaUrl} alt="media image" />
         <Card.Body>
           <Card.Title>{mediaItem.mediaAlt}</Card.Title>
           <Card.Text>{mediaItem.mediaDescription}</Card.Text>

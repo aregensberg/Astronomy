@@ -1,23 +1,21 @@
 import { createAction, createSlice } from '@reduxjs/toolkit'
 import {httpConfig} from "../utils/http-config"
-import * as posts from 'formik'
-import {glossary} from '/apis/utils/glossary'
 
 
 const slice = createSlice({
   name: "glossary",
   initialState: [],
   reducers:  {
-    getAllGlossaries : () => {
+    getAllGlossaries : (glossary, action) => {
       return action.payload
     },
-    getGlossaryByGlossaryId: () => {
-      posts.push(action.payload)
-    }
+    // getGlossaryByGlossaryId: () => {
+    //  glossary.push(action.payload)
+    // }
   }
 })
 
-export const {getGlossaryByGlossaryId, getAllGlossaries} = slice.actions
+export const { getAllGlossaries} = slice.actions
 
 export const fetchAllGlossaries = () => async (dispatch) => {
   const {data} = await httpConfig(`/apis/glossary/`)

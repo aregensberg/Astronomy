@@ -3,35 +3,42 @@ import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed'
 import Card from 'react-bootstrap/Card'
 import CardColumns from 'react-bootstrap/CardColumns'
 import Button from 'react-bootstrap/Button'
-import Navbar from 'react-bootstrap/Navbar'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchAllMedia } from '../store/media'
 import Nav from 'react-bootstrap/Nav'
 
 
 export function Landing() {
+  const media = useSelector(store => {
+    // console.log("Redux Store", store)
+    return store.media ? store.media : []
+  })
+
+  const dispatch = useDispatch()
+
+  const sideEffects = () => {
+    dispatch(fetchAllMedia())
+  }
+  React.useEffect(sideEffects, [])
   return (
   <>
-    <container>
-      <Navbar bg="light" variant="light">
-        <Navbar.Brand href="#home">Astronomy</Navbar.Brand>
-        <Nav className="mr-auto">
-          <Nav.Link href="#media">Media</Nav.Link>
-          <Nav.Link href="#glossary">Glossary</Nav.Link>
-          <Nav.Link href="#news">News</Nav.Link>
-        </Nav>
-      </Navbar>
-    </container>
-
-
 
     <div className="jumbotron">
         <img src="https://www.sciencealert.com/images/2020-05/processed/frb_topic_cover_nasa_1024.jpg" alt="Galaxy of stars"/>
     </div>
+    <div className="m-5 p-2 ">
 
-
-    <div className="m-5 p-2">
       <div className="p-2 mx-5">
-      <Button variant="primary" size="lg">NEWS</Button>{' '}
-      </div>
+
+        {/*activeKey="/News">*/}
+        {/*<Nav.Item>*/}
+        {/*  <Nav.Link href="/News">News</Nav.Link>*/}
+        {/*</Nav.Item>*/}
+
+        <Button href="/News">News</Button>{' '}
+
+      {/*<Button variant="primary" size="lg">NEWS</Button>{' '}*/}
+      {/*</div>*/}
 
     <CardColumns>
       <div className="card p-2">
@@ -46,22 +53,11 @@ export function Landing() {
       <div className="Card p-5 mx-2">
         <h5 className="card-title">Photo Of The Day</h5>
         <div className="Card.Body p-0">
-          <img src="https://cdn.images.express.co.uk/img/dynamic/151/590x/NASA-news-Hubble-space-telescope-galaxy-Messier-90-Milky-Way-collide-1132007.jpg?r=1558991836477" height="250" width="500"  alt="Galaxy" />
+          {media.length ? <img src={media[Math.round(Math.random() * (media.length - 1))].mediaUrl} height="auto" width="500"  alt="Random Hubble image" /> : ""}
         </div>
       </div>
     </CardColumns>
     </div>
-
-    <div>
-      <footer>
-        <div className="bg-light p-2">
-          <Nav className="mr-auto justify-content-center">
-            <Nav.Link href="#media">Media</Nav.Link>
-            <Nav.Link href="#glossary">Glossary</Nav.Link>
-            <Nav.Link href="#news">News</Nav.Link>
-          </Nav>
-        </div>
-      </footer>
     </div>
   </>
     )

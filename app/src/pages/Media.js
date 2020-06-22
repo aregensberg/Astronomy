@@ -1,29 +1,21 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap'
 import CarouselCaption from 'react-bootstrap/CarouselCaption'
 import { text } from '@fortawesome/fontawesome-svg-core'
+import { useSelector } from 'react-redux'
 
 export function Media() {
+  const media = useSelector(store => {
+    // console.log("Redux Store", store)
+    return store.media ? store.media : []
+  })
+  console.log(media)
   return(
     <>
       <div className='media'></div>
-{/*NavBar*/}
-      <container>
-        <Navbar bg="light" variant="light">
-          <Navbar.Brand href="#home">Astronomy</Navbar.Brand>
-          <Nav className="mr-auto">
-            <Nav.Link href="#media">Media</Nav.Link>
-            <Nav.Link href="#glossary">Glossary</Nav.Link>
-            <Nav.Link href="#news">News</Nav.Link>
-          </Nav>
-        </Navbar>
-      </container>
-
 {/*Header*/}
-
             <div className="card-body">
               <h1 className="text-center">Media</h1>
             </div>
@@ -126,7 +118,6 @@ export function Media() {
 {/*Video carousel*/}
 
       <Carousel>
-
         <Carousel.Item>
           <img
             className="d-block w-100"
@@ -134,39 +125,7 @@ export function Media() {
             alt="Third slide"
           />
         </Carousel.Item>
-
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://thesigndude.com/wp-content/uploads/2017/09/video-placeholder.jpg"
-            alt="Third slide"
-          />
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://thesigndude.com/wp-content/uploads/2017/09/video-placeholder.jpg"
-            alt="Third slide"
-          />
-        </Carousel.Item>
-
       </Carousel>
-
-
-{/*Footer*/}
-      <div>
-        <footer>
-          <div className="bg-light p-2">
-            <Nav className="mr-auto justify-content-center">
-              <Nav.Link href="#media">Media</Nav.Link>
-              <Nav.Link href="#glossary">Glossary</Nav.Link>
-              <Nav.Link href="#news">News</Nav.Link>
-            </Nav>
-          </div>
-        </footer>
-      </div>
-
     </>
   )
 }

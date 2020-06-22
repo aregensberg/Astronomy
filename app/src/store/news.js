@@ -6,16 +6,13 @@ const slice = createSlice({
   name: "news",
   initialState: [],
   reducers:  {
-    getAllNews : (posts, action) => {
+    getAllNews : (news, action) => {
       return action.payload
     },
-    getNewsByNewsId: (posts, action) => {
-      posts.push(action.payload)
-    }
   }
 })
 
-export const {getNewsByNewsId, getAllNews} = slice.actions
+export const {getAllNews} = slice.actions
 
 export const fetchAllNews = () => async (dispatch) => {
   const {data} = await httpConfig(`/apis/news`)

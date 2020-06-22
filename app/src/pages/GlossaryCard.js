@@ -1,19 +1,16 @@
 import React from 'react'
+import Card from 'react-bootstrap/Card'
 
 export function GlossaryCard({glossaries}) {
 
   return(
     <>
-      <div className="card mb-3" style={{maxWidth: "540px"}}>
-        <div className="row no-gutters">
-          <div className="col-md-8">
-            <div className="card-body">
-              <h5 className="card-title">{glossaries.glossaryName}</h5>
-              <p className="card-text">{glossaries.glossaryDefinition}</p>
-            </div>
-          </div>
+      <div className="container-md">
+      <Card border='0'>
+        <Card.Title p-2>{glossaries.glossaryName}</Card.Title>
+        <Card.Body>{glossaries.glossaryDefinition}</Card.Body>
+      </Card>
         </div>
-      </div>
     </>
   )
 }

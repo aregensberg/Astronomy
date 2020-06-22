@@ -7,7 +7,7 @@ export function Footer() {
   return(
     <>
       <Container>
-        <Nav  justify='center'
+        <Nav className="mr-auto justify-content-center"
           activeKey="/">
           <Nav.Item>
             <Nav.Link href="/">Astronished</Nav.Link>

@@ -27,10 +27,14 @@ export function Glossary() {
             </div>
           </div>
         </div>
-        <div className="row">
+        <div className='container-lg'>
+        <div className="row-cols-lg-1">
+          <div className="card">
           {glossary.map(glossaries => <GlossaryCard glossaries = {glossaries} key = {glossaries.glossaryId} />)}
         </div>
         </div>
+      </div>
+      </div>
       </>
     )
   }

@@ -3,15 +3,13 @@ import Card from 'react-bootstrap/Card'
 
 
 export function GlossaryCard({glossaries}) {
-
+  // bg='light' border='0'
   return(
     <>
-      <div className="container-md">
-      <Card bg='light' border='0'>
-        <Card.Title p-2>{glossaries.glossaryName}</Card.Title>
+      <section className="container-md p-2">
+        <Card.Title>{glossaries.glossaryName}</Card.Title>
         <Card.Body>{glossaries.glossaryDefinition}</Card.Body>
-      </Card>
-        </div>
+      </section>
     </>
   )
 }

@@ -6,11 +6,13 @@ import { text } from '@fortawesome/fontawesome-svg-core'
 import { useDispatch, useSelector } from 'react-redux'
 import { MediaCard } from './MediaCard'
 import { fetchAllMedia } from '../store/media'
+import ReactPlayer from 'react-player'
 
 export function Media() {
   const media = useSelector(store => {
     // console.log("Redux Store", store)
     return store.media ? store.media : []
+    console.log(store)
   })
       const dispatch = useDispatch()
 
@@ -28,11 +30,17 @@ export function Media() {
                 <h1>Media</h1>
               </div>
             </div>
+            <div className="row">
+              {media.slice(0,8).map(mediaItem => <MediaCard mediaItem = {mediaItem} key = {mediaItem.mediaId} />)}
+            </div>
+            <div className="row">
+              <div className="col-md-6 offset-md-3">
+                <ReactPlayer url="https://www.youtube.com/watch?v=Rq5SEhs9lws"/>
+
+              </div>
+            </div>
           </div>
         </div>
-          <div className="row">
-            {media.map(mediaItem => <MediaCard mediaItem = {mediaItem} key = {mediaItem.mediaId} />)}
-          </div>
 
 
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import CardColumns from 'react-bootstrap/CardColumns'
 import Card from 'react-bootstrap/Card'
+import Image from 'react-bootstrap/Image'
 
 import Col from 'react-bootstrap/Col'
 import divWithClassName from 'react-bootstrap/cjs/divWithClassName'

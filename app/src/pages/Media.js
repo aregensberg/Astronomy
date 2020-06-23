@@ -20,7 +20,8 @@ export function Media() {
       dispatch(fetchAllMedia())
     }
       React.useEffect(sideEffects, [])
-      console.log(media)
+  const videos = media.filter(media => media.mediaIsVideo===1)
+      // console.log(videos[0].mediaUrl)
       return(
       <>
         <div id="media">
@@ -31,11 +32,12 @@ export function Media() {
               </div>
             </div>
             <div className="row">
-              {media.slice(0,8).map(mediaItem => <MediaCard mediaItem = {mediaItem} key = {mediaItem.mediaId} />)}
+              {media.slice(4,60).map(mediaItem => <MediaCard mediaItem = {mediaItem} key = {mediaItem.mediaId} />)}
             </div>
             <div className="row">
               <div className="col-md-6 offset-md-3">
-                <ReactPlayer url="https://www.youtube.com/watch?v=Rq5SEhs9lws"/>
+                {/*<ReactPlayer url={`${videos[Math.round(Math.random() * (videos.length - 1))].mediaUrl} `}/>*/}
+                {/*<ReactPlayer url={`${videos[0].mediaUrl} `}/>*/}
 
               </div>
             </div>

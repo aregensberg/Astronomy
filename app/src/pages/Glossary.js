@@ -1,10 +1,8 @@
 import React from 'react'
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
 import { useDispatch, useSelector } from 'react-redux'
 import { GlossaryCard } from './GlossaryCard'
 import { fetchAllGlossaries } from '../store/glossary'
-
+import './glossary.module.css'
 
 export function Glossary() {
   const glossary = useSelector(store => {

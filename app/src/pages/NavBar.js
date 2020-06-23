@@ -1,6 +1,7 @@
 import React from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
+import Navbar from 'react-bootstrap/Navbar'
 
 
 
@@ -8,6 +9,9 @@ export function NavBar() {
   return(
     <>
       <Container>
+        <Navbar collapseOnSelect expand="md" variant="dark">
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
         <Nav
           activeKey="/">
           <Nav.Item>
@@ -35,6 +39,8 @@ export function NavBar() {
           </Nav>
         </Nav>
         </Nav>
+          </Navbar.Collapse>
+        </Navbar>
       </Container>
     </>
   )}

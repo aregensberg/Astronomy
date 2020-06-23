@@ -7,6 +7,7 @@ CREATE TABLE media(
     mediaAlt varchar(128) not null,
     mediaDescription varchar(512) not null,
     mediaIsVideo tinyint not null,
+    mediaThumbnailUrl varchar(255),
     mediaUrl varchar(300) not null ,
     primary key (mediaId)
 );

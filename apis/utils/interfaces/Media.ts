@@ -9,6 +9,8 @@ export interface Media {
 
     mediaAlt: string,
 
+    mediaThumbnailUrl: string| null,
+
     mediaUrl: string,
 
 

@@ -17,19 +17,16 @@ export function NavBar() {
           <Nav.Item>
             <Nav.Link href="/">Astronished</Nav.Link>
           </Nav.Item>
-
         <Nav
           activeKey="/News">
           <Nav.Item>
             <Nav.Link href="/News">News</Nav.Link>
           </Nav.Item>
-
           <Nav
           activeKey="/Media">
           <Nav.Item>
           <Nav.Link href="/Media">Media</Nav.Link>
         </Nav.Item>
-
           <Nav
             activeKey="/Glossary">
             <Nav.Item>

@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchAllMedia } from '../store/media'
 import Nav from 'react-bootstrap/Nav'
-
+import './landing.module.css'
 
 export function Landing() {
   const media = useSelector(store => {
@@ -26,30 +26,24 @@ export function Landing() {
     <div className="jumbotron ">
         <img src="https://www.sciencealert.com/images/2020-05/processed/frb_topic_cover_nasa_1024.jpg" alt="Galaxy of stars"/>
     </div>
-    <div className="m-5 p-2 ">
 
-      <div className="p-2 mx-5">
-
-        {/*activeKey="/News">*/}
-        {/*<Nav.Item>*/}
-        {/*  <Nav.Link href="/News">News</Nav.Link>*/}
-        {/*</Nav.Item>*/}
-
-        <Button href="/News">News</Button>{' '}
-
-      {/*<Button variant="primary" size="lg">NEWS</Button>{' '}*/}
-      {/*</div>*/}
-
+<div className='container-fluid d-block mx-auto'>
+<div className='container-fluid'>
+  <div className= 'row justify-content-around'>
+    <div className= 'col-lg-9 mx-auto my-lg-4'>
     <CardColumns>
-      <div className="card p-2">
+      <div className="card">
         <Card.Body>
           <Card.Text>
-            Lucas ipsum dolor sit amet gordin nadon fel bando skakoan koon moff ord darth kaleesh. Zam darth tusken raider ailyn tapani aayla muun sabé fett. Wirutid wat nautolan yuvernian zekk. Jettster wroonian firmus chagrian kast.
-            Padmé cathar ansion coruscant hutt nagai. Beru bibble b4-d4 jerjerrod durron. Jettster bib boba panaka. Maximilian yoda ponda woostoid togorian vebb ismaren luminara firrerreo. Senex plo kiffar wharl kiffar kit gricho croke yuzzem.
-            Ig-88 thul wirutid isolder desann greeata drach'nam subterrel. test
+            The Hubble Space Telescope has captured many beautiful and captivating images from our galaxy. Enjoy the latest astronomy news with our collection of recent events. We Provide up to date news releases with the assistance from NASA and ESA.
           </Card.Text>
         </Card.Body>
       </div>
+
+      <section id='button'>
+      <Button href="/News" className='btn-light'>Latest News</Button>{' '}
+      </section>
+
       <div className="Card p-5 mx-2">
         <h5 className="card-title">Photo Of The Day</h5>
         <div className="Card.Body p-0">
@@ -57,8 +51,10 @@ export function Landing() {
         </div>
       </div>
     </CardColumns>
-    </div>
-    </div>
+  </div>
+</div>
+  </div>
+  </div>
   </>
     )
     }

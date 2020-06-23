@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { GlossaryCard } from './GlossaryCard'
 import { fetchAllGlossaries } from '../store/glossary'
-import './glossary.module.css'
+import './glossary.css'
 
 export function Glossary() {
   const glossary = useSelector(store => {
@@ -29,7 +29,7 @@ export function Glossary() {
         </div>
         <div className='container-lg'>
         <div className="row-cols-lg-1">
-          <div className="card">
+          <div className="card poop">
           {glossary.map(glossaries => <GlossaryCard glossaries = {glossaries} key = {glossaries.glossaryId} />)}
         </div>
         </div>

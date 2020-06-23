@@ -1,0 +1,16 @@
+body{
+	background-color: #00006f;
+}
+
+.nav-link {
+	display: block;
+	padding: 0.5rem 1rem;
+	color: white;
+	font-style: italic;
+}
+
+h1{
+	color: white;
+	padding: 1em;
+	text-shadow: 2px 3px 5px #37ebff;
+}

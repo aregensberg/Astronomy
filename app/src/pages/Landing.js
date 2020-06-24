@@ -30,19 +30,19 @@ export function Landing () {
           </div>
         </div>
         <div className='row'>
-          <div className="col-md-6 col-lg-5 offset-lg-1">
+          <div className="col-md-6 col-lg-5 offset-lg-1 m-lg-5">
            <div className="bg-light p-3">
              <p>
                The Hubble Space Telescope has captured many beautiful and captivating images from our galaxy. Enjoy the
                latest astronomy news with our collection of recent events. We Provide up to date news releases with the
                assistance from NASA and ESA.
              </p>
-             <Button href="/News" className='btn-info'>Latest News</Button>
+             <Button href="/News" className='btn-dark'>Latest News</Button>
            </div>
 
           </div>
           <div className="col-md-6 col-lg-5">
-            <h5 className="card-title">Photo Of The Day</h5>
+            <h4 className="card-title">Photo Of The Day</h4>
             <div className="Card.Body p-0">
               {media.length ? <img src={media[Math.round(Math.random() * (media.length - 1))].mediaUrl}
                                    className="img-fluid" alt="Random Hubble image"/> : ''}

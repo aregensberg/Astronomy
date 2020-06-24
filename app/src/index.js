@@ -7,6 +7,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import reducer from "./store"
 import { Provider } from 'react-redux'
 import "./index.css"
+
 import {Footer} from './pages/Footer'
 import {FourOhFour} from "./pages/FourOhFour";
 import {Glossary} from './pages/Glossary'

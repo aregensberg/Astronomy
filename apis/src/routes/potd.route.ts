@@ -9,6 +9,3 @@ export const potdRoute = Router()
 potdRoute.route('/')
 	.get(getAllPotdController)
 
-potdRoute.route("/:glossaryId")
-	.get(asyncValidatorController([check("potd", "Please check your potdId").isUUID()]), getAllPotdController)
-

@@ -60,7 +60,7 @@ export function Landing () {
             </div>
           </div>
           <div className="Card p-5 mx-2">
-            <h5 className="card-title">Photo Of The Day</h5>
+            <h4 className="card-title">Photo Of The Day</h4>
             <div className="Card.Body p-0">
               {nasaPhoto !== null ? (<img src={nasaPhoto.url} height="auto" width="500" alt="Random Hubble image"/>) : (
                 <div className={status.type}>{status.message}</div>)}

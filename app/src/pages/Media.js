@@ -47,7 +47,7 @@ export function Media () {
 
           <div className="card-deck row">
             {videos && (
-              <div className="col-md-6 offset-md-3">
+              <div className="col-md-6 offset-md-3 pb-4">
                 <ReactPlayer
                   width="100%"
                   height="100%"

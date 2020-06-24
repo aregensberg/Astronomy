@@ -25,10 +25,8 @@ export function Landing() {
   <>
 
     <div className="jumbotron">
-      <Threejs>
+      <Threejs />
 
-      </Threejs>
-        <img src="https://www.sciencealert.com/images/2020-05/processed/frb_topic_cover_nasa_1024.jpg" alt="Galaxy of stars"/>
     </div>
     <div className="m-5 p-2 ">
 

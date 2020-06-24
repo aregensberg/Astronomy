@@ -15,7 +15,7 @@ export function NavBar() {
         <Nav
           activeKey="/">
           <Nav.Item>
-            <Nav.Link href="/">Astronished</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
           </Nav.Item>
         <Nav
           activeKey="/News">

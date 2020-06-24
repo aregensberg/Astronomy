@@ -4,9 +4,10 @@
 .jumbotron {
 	background-color: transparent;
 	border: #37ebff;
+	padding: 0;
 }
 
-.bg-light {
+.bg-secondary {
 	background-color: #f8f9fa !important;
 	border: 5px solid #37EBFE;
 }
@@ -21,7 +22,7 @@ h4 {
 	color: whitesmoke;
 	padding: 1em;
 	margin-left: 4em;
-	text-shadow: 2px 2px 3px #37ebff;
+	text-shadow: 2px 2px 2px #000000;
 	font-family: 'Montserrat', sans-serif;
 	font-size: x-large;
 }

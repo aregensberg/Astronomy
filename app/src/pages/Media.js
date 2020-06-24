@@ -32,13 +32,13 @@ export function Media() {
               </div>
             </div>
             <div className="row">
-              {media.slice(4,60).map(mediaItem => <MediaCard mediaItem = {mediaItem} key = {mediaItem.mediaId} />)}
+              {media.slice(3,35).map(mediaItem => <MediaCard mediaItem = {mediaItem} key = {mediaItem.mediaId} />)}
             </div>
             <div className="row">
               <div className="col-md-6 offset-md-3">
                 {/*<ReactPlayer url={`${videos[Math.round(Math.random() * (videos.length - 1))].mediaUrl} `}/>*/}
                 {/*<ReactPlayer url={`${videos[0].mediaUrl} `}/>*/}
-
+               <ReactPlayer url='https://www.youtube.com/watch?v=q0P2-qcos90' />
               </div>
             </div>
           </div>

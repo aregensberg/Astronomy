@@ -1,5 +1,4 @@
 import React from 'react'
-import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed'
 import Card from 'react-bootstrap/Card'
 import CardColumns from 'react-bootstrap/CardColumns'
 import Button from 'react-bootstrap/Button'
@@ -7,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchAllMedia } from '../store/media'
 import Nav from 'react-bootstrap/Nav'
 import { httpConfig } from '../utils/http-config'
+import Threejs from './Threejs'
 
 
 export function Landing() {
@@ -38,7 +38,8 @@ const [nasaPhoto, setNasaPhoto] = React.useState(null)
   <>
 
     <div className="jumbotron">
-        <img src="https://www.sciencealert.com/images/2020-05/processed/frb_topic_cover_nasa_1024.jpg" alt="Galaxy of stars"/>
+      <Threejs />
+
     </div>
     <div className="m-5 p-2 ">
 

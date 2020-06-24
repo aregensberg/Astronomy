@@ -4,7 +4,7 @@ import { GlossaryCard } from './GlossaryCard'
 import { fetchAllGlossaries } from '../store/glossary'
 import './glossary.css'
 
-export function Glossary() {
+export function Glossary () {
   const glossary = useSelector(store => {
     // console.log("Redux Store", store)
     return store.glossary ? store.glossary : []
@@ -17,7 +17,7 @@ export function Glossary() {
   }
   React.useEffect(sideEffects, [])
   console.log(glossary)
-  return(
+  return (
     <>
       <div id="glossary">
         <div className="container text-center">
@@ -28,13 +28,13 @@ export function Glossary() {
           </div>
         </div>
         <div className='container-lg'>
-        <div className="row-cols-lg-1">
-          <div className="card poop">
-          {glossary.map(glossaries => <GlossaryCard glossaries = {glossaries} key = {glossaries.glossaryId} />)}
-        </div>
+          <div className="row-cols-lg-1">
+            <div className="card gloss">
+              {glossary.map(glossaries => <GlossaryCard glossaries={glossaries} key={glossaries.glossaryId}/>)}
+            </div>
+          </div>
         </div>
       </div>
-      </div>
-      </>
-    )
-  }
+    </>
+  )
+}

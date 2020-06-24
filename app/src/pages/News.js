@@ -1,11 +1,10 @@
 import React from 'react'
-import Nav from 'react-bootstrap/Nav'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchAllNews } from '../store/news'
 import { NewsCard } from './NewsCard'
-import {NavBar} from './NavBar'
+import './news.css'
 
-export function News() {
+export function News () {
   const news = useSelector(store => {
     // console.log("Redux Store", store)
     return store.news ? store.news : []
@@ -18,18 +17,20 @@ export function News() {
   }
   React.useEffect(sideEffects, [])
   console.log(news)
-  return(
+  return (
     <>
       <div id="news">
-      <div className="container text-center">
-        <div className="row">
-          <div className="col">
-            <h1>NEWS</h1>
+        <div className="container text-center">
+          <div className="row mx-md-3">
+            <div className="col p-2 mx-auto">
+              <h1>NEWS</h1>
+            </div>
           </div>
         </div>
-      </div>
-        <div className="row">
-        {news.map(newsItem => <NewsCard newsItem = {newsItem} key = {newsItem.newsId} />)}
+        <div className='container-lg'>
+          <div className="row-col-lg-1">
+            {news.map(newsItem => <NewsCard newsItem={newsItem} key={newsItem.newsId}/>)}
+          </div>
         </div>
       </div>
     </>

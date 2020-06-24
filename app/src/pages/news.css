@@ -1,8 +1,12 @@
-.gloss {
-	border: 5px solid #37ebff;
+img {
+	padding: 1.5em;
+
+}
+
+.media-body {
 	font-family: 'Roboto', sans-serif;
 }
 
-.card-title {
+h5 {
 	font-family: 'Raleway', sans-serif;
 }

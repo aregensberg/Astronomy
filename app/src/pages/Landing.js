@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchAllMedia } from '../store/media'
 import Nav from 'react-bootstrap/Nav'
+import { httpConfig } from '../utils/http-config'
 
 
 export function Landing() {
@@ -13,12 +14,25 @@ export function Landing() {
     // console.log("Redux Store", store)
     return store.media ? store.media : []
   })
-
+const [nasaPhoto, setNasaPhoto] = React.useState(null)
+  const [status, setStatus] = React.useState({message: "Photo of the day is loading", type: ""})
+  console.log(nasaPhoto)
   const dispatch = useDispatch()
 
   const sideEffects = () => {
+    httpConfig.get("/apis/potd/")
+      .then((reply) => {
+        if (reply.data !== null) {
+          setNasaPhoto(reply.data)
+        } else{
+          const{type, message} = reply
+          setStatus({type, message})
+        }
+
+      })
     dispatch(fetchAllMedia())
   }
+
   React.useEffect(sideEffects, [])
   return (
   <>
@@ -53,7 +67,7 @@ export function Landing() {
       <div className="Card p-5 mx-2">
         <h5 className="card-title">Photo Of The Day</h5>
         <div className="Card.Body p-0">
-          {media.length ? <img src={media[Math.round(Math.random() * (media.length - 1))].mediaUrl} height="auto" width="500"  alt="Random Hubble image" /> : ""}
+          {nasaPhoto !== null ? (<img src={nasaPhoto.url} height="auto" width="500"  alt="Random Hubble image" /> ) :(<div className={status.type}>{status.message}</div>)}
         </div>
       </div>
     </CardColumns>

@@ -1,5 +1,4 @@
 import React from 'react'
-import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed'
 import Card from 'react-bootstrap/Card'
 import CardColumns from 'react-bootstrap/CardColumns'
 import Button from 'react-bootstrap/Button'

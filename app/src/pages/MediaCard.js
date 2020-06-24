@@ -12,10 +12,10 @@ export function MediaCard({mediaItem}) {
   return(
 
     // <div className="container">
-        <div className="col-md-3 mb-3">
+        <div className="container-fluid col-md-3 mb-3">
           <Card border={'primary'} bg={'light'} className="h-100">
-            <Card.Img className="centered" variant="top" src={mediaItem.mediaUrl} alt="media image"/>
-            <Card.Body>
+            <Image fluid className="centered" variant="top" src={mediaItem.mediaUrl} alt="media image"/>
+            <Card.Body variant="bottom">
               <Card.Title>{mediaItem.mediaAlt}</Card.Title>
               <Card.Text>{mediaItem.mediaDescription}</Card.Text>
             </Card.Body>

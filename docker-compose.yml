@@ -20,6 +20,18 @@ services:
 
          - 3306:3306
 
+   app:
+
+      build: ./app
+
+      depends_on:
+
+         - node
+
+      ports:
+
+         - 80:80
+
    node:
 
       build: ./apis

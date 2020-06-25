@@ -49,8 +49,8 @@ export function Landing () {
           </div>
         </div>
         <div className='row mx-md-3'>
-          <div className="col-md-6 col-lg-5 offset-lg-1 m-lg-5">
-            <div className="bg-secondary p-3">
+          <div className="col-md-6 col-lg-5 offset-lg-1 m-lg-5 pt-3">
+            <div className="bg-secondary p-5">
               <p>
                 The Hubble Space Telescope has captured many beautiful and captivating images from our galaxy. Enjoy the
                 latest astronomy news with our collection of recent events. We Provide up to date news releases with the

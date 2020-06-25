@@ -1,6 +1,7 @@
-/*.button:focus {*/
-/*	outline: solid white;*/
-/*}*/
+button:focus {
+outline: solid white;
+}
+
 .jumbotron {
 	background-color: transparent;
 	border: #37ebff;
@@ -8,6 +9,7 @@
 }
 
 .bg-secondary {
+	font-family: 'Roboto', sans-serif;
 	background-color: #f8f9fa !important;
 	border: 5px solid #37EBFE;
 }
@@ -16,16 +18,21 @@
 }
 
 .btn-dark {
+	font-family: 'Roboto', sans-serif;
 	color: #fff;
 	background-color: #1917b8;
 	border-color: #37EBFE;
 }
 
 h4 {
-	color: whitesmoke;
+	color: black;
 	padding: 1em;
 	margin-left: 4em;
-	text-shadow: 2px 2px 2px #000000;
-	font-family: 'Montserrat', sans-serif;
+	text-shadow: 2px 2px 2px #ffffff;
+	font-family: 'Montserrat', sans-serif!important;
 	font-size: x-large;
+}
+
+a:hover{
+	color: #37EBFE;
 }

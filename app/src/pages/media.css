@@ -3,3 +3,16 @@ col {
 	max-width: 50%;
 	padding-bottom: 3em;
 }
+
+video {
+	box-shadow: 3px 3px 3px whitesmoke;
+}
+
+div.row.images {
+	padding: 2em;
+}
+
+.card {
+	border: 4px solid #37ebff;
+/*border={'primary'} bg={'light'} className="h-100"*/
+}

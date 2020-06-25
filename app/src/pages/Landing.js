@@ -42,7 +42,7 @@ export function Landing () {
         </div>
         <div className="row mx-md-3">
           <div className="col">
-              <div className="jumbotron">
+              <div className="jumbotron" id="three-jswrapper">
                 <Threejs/>
               </div>
             </div>

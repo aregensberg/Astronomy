@@ -11,6 +11,9 @@
 	background-color: #f8f9fa !important;
 	border: 5px solid #37EBFE;
 }
+#three-jswrapper canvas:last-child {
+	display: none;
+}
 
 .btn-dark {
 	color: #fff;

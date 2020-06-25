@@ -9,16 +9,20 @@ import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
 import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass'
 
 
-class Stars extends React.Component {
-  componentDidMount () {
+function Stars () {
+  const mount = React.useRef(null)
+  const threeJsNonsense = () =>  {
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
     camera.position.z = 100
     var renderer = new THREE.WebGLRenderer();
-    renderer.setSize( window.innerWidth, window.innerHeight );
+
+    renderer.setSize( mount.current.clientWidth, 500);
     // document.body.appendChild( renderer.domElement );
     // use ref as a mount point of the Three.js scene instead of the document.body
-    this.mount.appendChild( renderer.domElement );
+    mount.current.appendChild( renderer.domElement );
+
+    console.log(mount)
 
     var starTexture1 = new THREE.TextureLoader().load("./bluestar.png")
     var starTexture2 = new THREE.TextureLoader().load("./dyingstar.png")
@@ -140,14 +144,14 @@ class Stars extends React.Component {
 //       requestAnimationFrame(render)
 //     }
   }
-  render() {
+  React.useEffect(threeJsNonsense, [mount.current])
+
     return(
       <>
-        <div ref = {ref => this.mount = ref} />
+        <div ref = {mount} />
 
         </>
     )
-  }
 }
 
 export default Stars

@@ -13,7 +13,7 @@ export function MediaCard({mediaItem}) {
 
 
   return(
-        <div className="container-fluid col-md-3 mb-3">
+        <div className="container-fluid col-md-3 mb-5">
           <Card className="h-100">
             <Image fluid className="centered" variant="top" src={mediaItem.mediaUrl} alt="media image"/>
             <Card.Body variant="bottom">

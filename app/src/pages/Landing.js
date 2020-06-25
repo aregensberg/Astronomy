@@ -53,7 +53,7 @@ export function Landing () {
             <div className="bg-secondary p-5">
               <p>
                 The Hubble Space Telescope has captured many beautiful and captivating images from our galaxy. Enjoy the
-                latest astronomy news with our collection of recent events. We Provide up to date news releases with the
+                latest astronomy news with our collection of recent events. We provide up to date news releases with the
                 assistance from NASA and ESA.
               </p>
               <Button href="/News" className='btn-dark'>Latest News</Button>

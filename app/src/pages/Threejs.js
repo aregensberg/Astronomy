@@ -68,7 +68,7 @@ function Stars () {
     scene.add( ring1 );
 
     var geometry4 = new THREE.SphereGeometry( 10, 10, 10 );
-    var material5 = new THREE.MeshBasicMaterial( { color: 0x974B00 } )
+    var material5 = new THREE.MeshBasicMaterial( { color: 0xFF9933 } )
     var planet2 = new THREE.Mesh( geometry4, material5 )
     planet2.position.x = 190
     planet2.position.y = 100

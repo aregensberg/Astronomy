@@ -5,6 +5,7 @@ import {indexRoutes} from './routes/index.route';
 import {newsRoute} from './routes/news.route';
 import {mediaRoute} from "./routes/media.route";
 import {glossaryRoute} from "./routes/glossary.route";
+import {potdRoute} from "./routes/potd.route";
 
 //const cookieParser = require('cookie-parser')
 
@@ -41,7 +42,8 @@ export class App {
 		this.app.use('/apis', indexRoutes);
 		this.app.use('/apis/media', mediaRoute);
 		this.app.use('/apis/news', newsRoute);
-		this.app.use('/apis/glossary', glossaryRoute)
+		this.app.use('/apis/glossary', glossaryRoute);
+		this.app.use('/apis/potd', potdRoute)
 
 	}
 

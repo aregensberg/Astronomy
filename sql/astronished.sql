@@ -7,6 +7,7 @@ CREATE TABLE media(
     mediaAlt varchar(128) not null,
     mediaDescription varchar(512) not null,
     mediaIsVideo tinyint not null,
+    mediaThumbnailUrl varchar(255),
     mediaUrl varchar(300) not null ,
     primary key (mediaId)
 );
@@ -29,7 +30,6 @@ CREATE TABLE news(
     primary key(newsId)
 );
 
-INSERT INTO glossary(glossaryId, glossaryName, glossaryDefinition) VALUES(UUID_TO_BIN(UUID()), "glossaryPlaceholderName", "glossaryPlaceholderDef");
 INSERT INTO glossary(glossaryId, glossaryName, glossaryDefinition) VALUES(UUID_TO_BIN(UUID()), "Cool glossary entry", "Cool definitionf");
 INSERT INTO news(newsId, newsImg, newsDescription, newsUrl, newsTitle, newsDate) VALUES(UUID_TO_BIN(UUID()), "newsPlaceholderImg", "newsPlaceholderDesc", "newsPlaceholderUrl", "newsPlaceholderTitle", Now());
 INSERT INTO news(newsId, newsImg, newsDescription, newsUrl, newsTitle, newsDate) VALUES(UUID_TO_BIN(UUID()), "Awesome news picture", "Awesome news description", "https://thisisa.url", "Awesome title", Now());
